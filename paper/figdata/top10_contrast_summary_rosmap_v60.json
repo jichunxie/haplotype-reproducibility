@@ -1,0 +1,984 @@
+{
+  "script": "finalize_rosmap_contrast_v60.py",
+  "privacy": "rank aggregates, per-locus Spearman correlation, and per-locus modal partner Hamming fraction; no haplotype identities or counts",
+  "datasets": [
+    {
+      "dataset": "ROS/MAP",
+      "arm": "armA",
+      "lead_state": 0,
+      "n_loci": 27,
+      "n_certified": 27,
+      "by_rank": [
+        {
+          "rank": 1,
+          "n_loci": 27,
+          "median_fitted_probability": 0.8262825570687805,
+          "median_empirical_probability": 0.9672131147540983,
+          "fraction_observed_at_least_once": 1.0,
+          "median_cumulative_empirical_probability": 0.9672131147540983,
+          "q025_cumulative_empirical_probability": 0.804628164556962,
+          "q975_cumulative_empirical_probability": 0.9988773747841105
+        },
+        {
+          "rank": 2,
+          "n_loci": 27,
+          "median_fitted_probability": 0.010164078543503837,
+          "median_empirical_probability": 0.0038684719535783366,
+          "fraction_observed_at_least_once": 0.6296296296296297,
+          "median_cumulative_empirical_probability": 0.9672131147540983,
+          "q025_cumulative_empirical_probability": 0.8217862914085645,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 3,
+          "n_loci": 26,
+          "median_fitted_probability": 0.005804897893188632,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.34615384615384615,
+          "median_cumulative_empirical_probability": 0.9718574108818012,
+          "q025_cumulative_empirical_probability": 0.8227082772241674,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 4,
+          "n_loci": 26,
+          "median_fitted_probability": 0.005039127747451845,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.15384615384615385,
+          "median_cumulative_empirical_probability": 0.9718574108818012,
+          "q025_cumulative_empirical_probability": 0.8273182063021816,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 5,
+          "n_loci": 23,
+          "median_fitted_probability": 0.004010747942041855,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.34782608695652173,
+          "median_cumulative_empirical_probability": 0.9737335834896812,
+          "q025_cumulative_empirical_probability": 0.8273182063021816,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 6,
+          "n_loci": 23,
+          "median_fitted_probability": 0.002534804130930767,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.34782608695652173,
+          "median_cumulative_empirical_probability": 0.977485928705441,
+          "q025_cumulative_empirical_probability": 0.8282401921177844,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 7,
+          "n_loci": 23,
+          "median_fitted_probability": 0.002116320125068059,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.17391304347826086,
+          "median_cumulative_empirical_probability": 0.9789719626168224,
+          "q025_cumulative_empirical_probability": 0.8282401921177844,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 8,
+          "n_loci": 23,
+          "median_fitted_probability": 0.0019332790172132495,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.13043478260869565,
+          "median_cumulative_empirical_probability": 0.9789719626168224,
+          "q025_cumulative_empirical_probability": 0.8282401921177844,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 9,
+          "n_loci": 23,
+          "median_fitted_probability": 0.0019067661147272414,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.2608695652173913,
+          "median_cumulative_empirical_probability": 0.9789719626168224,
+          "q025_cumulative_empirical_probability": 0.8310061495645928,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 10,
+          "n_loci": 23,
+          "median_fitted_probability": 0.0015499362200421813,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.08695652173913043,
+          "median_cumulative_empirical_probability": 0.9789719626168224,
+          "q025_cumulative_empirical_probability": 0.8337721070114014,
+          "q975_cumulative_empirical_probability": 1.0
+        }
+      ],
+      "spearman_rho": [
+        0.7049344049891617,
+        0.759389481241052,
+        0.7027819284987274,
+        0.528680532637681,
+        0.7624215913796516,
+        0.632455532033676,
+        0.75,
+        0.47539016305334153,
+        0.5459937698255332,
+        0.3713336650909358,
+        0.9486832980505139,
+        0.666891151465661,
+        0.17150335289900862,
+        0.4913462197147793,
+        0.3904344047215152,
+        0.737810136793917,
+        0.8090398349558906,
+        0.11713032141645456,
+        0.7218924835453033,
+        0.9999999999999999,
+        0.27758415545386667,
+        0.5551140171662975,
+        0.46852128566581824,
+        0.6506238887813052,
+        0.6086270034005169,
+        0.7745966692414834,
+        0.7252406676228423
+      ],
+      "median_spearman_rho": 0.6506238887813052,
+      "fraction_positive_spearman": 1.0
+    },
+    {
+      "dataset": "ROS/MAP",
+      "arm": "armA",
+      "lead_state": 1,
+      "n_loci": 27,
+      "n_certified": 27,
+      "by_rank": [
+        {
+          "rank": 1,
+          "n_loci": 27,
+          "median_fitted_probability": 0.8142511482007305,
+          "median_empirical_probability": 0.9361069836552749,
+          "fraction_observed_at_least_once": 1.0,
+          "median_cumulative_empirical_probability": 0.9361069836552749,
+          "q025_cumulative_empirical_probability": 0.6410860860860861,
+          "q975_cumulative_empirical_probability": 0.9934974335551786
+        },
+        {
+          "rank": 2,
+          "n_loci": 27,
+          "median_fitted_probability": 0.01420802034305986,
+          "median_empirical_probability": 0.008658008658008658,
+          "fraction_observed_at_least_once": 0.7037037037037037,
+          "median_cumulative_empirical_probability": 0.9523809523809524,
+          "q025_cumulative_empirical_probability": 0.6682138388388389,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 3,
+          "n_loci": 26,
+          "median_fitted_probability": 0.006872158719656345,
+          "median_empirical_probability": 0.002333815537820544,
+          "fraction_observed_at_least_once": 0.5769230769230769,
+          "median_cumulative_empirical_probability": 0.9545454545454546,
+          "q025_cumulative_empirical_probability": 0.6923767517517517,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 4,
+          "n_loci": 26,
+          "median_fitted_probability": 0.004648482784974203,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.4230769230769231,
+          "median_cumulative_empirical_probability": 0.9678284182305631,
+          "q025_cumulative_empirical_probability": 0.7048454704704705,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 5,
+          "n_loci": 23,
+          "median_fitted_probability": 0.0033193123147237783,
+          "median_empirical_probability": 0.0021645021645021645,
+          "fraction_observed_at_least_once": 0.5652173913043478,
+          "median_cumulative_empirical_probability": 0.9678284182305631,
+          "q025_cumulative_empirical_probability": 0.7139176676676676,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 6,
+          "n_loci": 23,
+          "median_fitted_probability": 0.002861258897404128,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.391304347826087,
+          "median_cumulative_empirical_probability": 0.9734042553191489,
+          "q025_cumulative_empirical_probability": 0.7173141891891891,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 7,
+          "n_loci": 23,
+          "median_fitted_probability": 0.0025999946944580067,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.34782608695652173,
+          "median_cumulative_empirical_probability": 0.9734042553191489,
+          "q025_cumulative_empirical_probability": 0.7244944944944944,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 8,
+          "n_loci": 23,
+          "median_fitted_probability": 0.0022894900776509815,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.30434782608695654,
+          "median_cumulative_empirical_probability": 0.9734042553191489,
+          "q025_cumulative_empirical_probability": 0.7244944944944944,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 9,
+          "n_loci": 23,
+          "median_fitted_probability": 0.0021083919380844524,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.13043478260869565,
+          "median_cumulative_empirical_probability": 0.9734042553191489,
+          "q025_cumulative_empirical_probability": 0.7263863863863863,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 10,
+          "n_loci": 23,
+          "median_fitted_probability": 0.00201592686892281,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.17391304347826086,
+          "median_cumulative_empirical_probability": 0.9734042553191489,
+          "q025_cumulative_empirical_probability": 0.7278910160160159,
+          "q975_cumulative_empirical_probability": 1.0
+        }
+      ],
+      "spearman_rho": [
+        0.7453559924999299,
+        0.5011175695659001,
+        0.7920349407187459,
+        0.8563488385776752,
+        0.7092993656151907,
+        0.9486832980505139,
+        0.16705381391691135,
+        0.8991204081865277,
+        0.9273210372571158,
+        0.4798010706723879,
+        1.0,
+        0.3618136134933163,
+        0.8908119038783117,
+        0.8843645787252311,
+        0.2944929180799592,
+        0.825378700960959,
+        0.4719399037242695,
+        0.5254270830780441,
+        0.6574725612947926,
+        0.9999999999999999,
+        0.47583943742582996,
+        0.8025302972777915,
+        0.8663842107411702,
+        0.7768938156249454,
+        0.3587460832234464,
+        0.632455532033676,
+        0.915810939779251
+      ],
+      "median_spearman_rho": 0.7768938156249454,
+      "fraction_positive_spearman": 1.0
+    },
+    {
+      "dataset": "ROS/MAP",
+      "arm": "armB",
+      "lead_state": 0,
+      "n_loci": 37,
+      "n_certified": 37,
+      "by_rank": [
+        {
+          "rank": 1,
+          "n_loci": 37,
+          "median_fitted_probability": 0.7163207802007632,
+          "median_empirical_probability": 0.8023255813953488,
+          "fraction_observed_at_least_once": 1.0,
+          "median_cumulative_empirical_probability": 0.8023255813953488,
+          "q025_cumulative_empirical_probability": 0.44002157074222964,
+          "q975_cumulative_empirical_probability": 0.9968911917098445
+        },
+        {
+          "rank": 2,
+          "n_loci": 37,
+          "median_fitted_probability": 0.020247013291834245,
+          "median_empirical_probability": 0.006172839506172839,
+          "fraction_observed_at_least_once": 0.6486486486486487,
+          "median_cumulative_empirical_probability": 0.8693548387096774,
+          "q025_cumulative_empirical_probability": 0.4734117520486292,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 3,
+          "n_loci": 36,
+          "median_fitted_probability": 0.01021827687198082,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.4722222222222222,
+          "median_cumulative_empirical_probability": 0.8746223564954683,
+          "q025_cumulative_empirical_probability": 0.4734117520486292,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 4,
+          "n_loci": 36,
+          "median_fitted_probability": 0.008029836077229102,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.4722222222222222,
+          "median_cumulative_empirical_probability": 0.8761329305135952,
+          "q025_cumulative_empirical_probability": 0.5264017644210941,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 5,
+          "n_loci": 36,
+          "median_fitted_probability": 0.006188867318127598,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.16666666666666666,
+          "median_cumulative_empirical_probability": 0.899236641221374,
+          "q025_cumulative_empirical_probability": 0.5274818036952497,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 6,
+          "n_loci": 36,
+          "median_fitted_probability": 0.005396596017796997,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.19444444444444445,
+          "median_cumulative_empirical_probability": 0.9190839694656489,
+          "q025_cumulative_empirical_probability": 0.5274818036952497,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 7,
+          "n_loci": 36,
+          "median_fitted_probability": 0.004686435804413644,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.2222222222222222,
+          "median_cumulative_empirical_probability": 0.9320241691842901,
+          "q025_cumulative_empirical_probability": 0.5274818036952497,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 8,
+          "n_loci": 36,
+          "median_fitted_probability": 0.0038590971461929225,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.16666666666666666,
+          "median_cumulative_empirical_probability": 0.933534743202417,
+          "q025_cumulative_empirical_probability": 0.5320900986261252,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 9,
+          "n_loci": 33,
+          "median_fitted_probability": 0.0037790504931175368,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.06060606060606061,
+          "median_cumulative_empirical_probability": 0.933534743202417,
+          "q025_cumulative_empirical_probability": 0.5320900986261252,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 10,
+          "n_loci": 33,
+          "median_fitted_probability": 0.0031088305895049647,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.12121212121212122,
+          "median_cumulative_empirical_probability": 0.933534743202417,
+          "q025_cumulative_empirical_probability": 0.5320900986261252,
+          "q975_cumulative_empirical_probability": 1.0
+        }
+      ],
+      "spearman_rho": [
+        0.2374132066142207,
+        0.38376925912706983,
+        0.7453559924999299,
+        0.8842048302391148,
+        0.5222329678670935,
+        0.5222329678670935,
+        0.45485671855824034,
+        0.4787529007367305,
+        0.1099063912519901,
+        0.7910398521054723,
+        0.812776759390954,
+        0.8908119038783117,
+        0.6030829123420404,
+        0.7693447387639306,
+        0.7483357769119656,
+        0.8002922379634526,
+        0.9999999999999999,
+        0.5319951765989315,
+        0.9341987329938275,
+        0.7416198487095663,
+        0.2028756678001723,
+        0.737810136793917,
+        0.8090398349558906,
+        0.7006490497453708,
+        0.6666666666666667,
+        0.38352566075529565,
+        0.4670993664969138,
+        0.3638527494714231,
+        0.5089357884058928,
+        0.3104635480678836,
+        0.6357461703447989,
+        0.6336056499416161,
+        0.8930543165283614,
+        0.6227991553292185,
+        0.5520524474738833,
+        0.812776759390954,
+        0.7252406676228423
+      ],
+      "median_spearman_rho": 0.6357461703447989,
+      "fraction_positive_spearman": 1.0
+    },
+    {
+      "dataset": "ROS/MAP",
+      "arm": "armB",
+      "lead_state": 1,
+      "n_loci": 37,
+      "n_certified": 37,
+      "by_rank": [
+        {
+          "rank": 1,
+          "n_loci": 37,
+          "median_fitted_probability": 0.5641147749154602,
+          "median_empirical_probability": 0.6558441558441559,
+          "fraction_observed_at_least_once": 1.0,
+          "median_cumulative_empirical_probability": 0.6558441558441559,
+          "q025_cumulative_empirical_probability": 0.24743954480796587,
+          "q975_cumulative_empirical_probability": 0.9731719104119451
+        },
+        {
+          "rank": 2,
+          "n_loci": 37,
+          "median_fitted_probability": 0.05606935491110447,
+          "median_empirical_probability": 0.011111111111111112,
+          "fraction_observed_at_least_once": 0.8378378378378378,
+          "median_cumulative_empirical_probability": 0.813953488372093,
+          "q025_cumulative_empirical_probability": 0.3664703509479629,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 3,
+          "n_loci": 36,
+          "median_fitted_probability": 0.01704011838837642,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.4166666666666667,
+          "median_cumulative_empirical_probability": 0.813953488372093,
+          "q025_cumulative_empirical_probability": 0.3664703509479629,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 4,
+          "n_loci": 36,
+          "median_fitted_probability": 0.011838515212107374,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.4444444444444444,
+          "median_cumulative_empirical_probability": 0.8349514563106797,
+          "q025_cumulative_empirical_probability": 0.3664703509479629,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 5,
+          "n_loci": 36,
+          "median_fitted_probability": 0.009991252773902254,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.2777777777777778,
+          "median_cumulative_empirical_probability": 0.8751857355126301,
+          "q025_cumulative_empirical_probability": 0.3996171171171171,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 6,
+          "n_loci": 36,
+          "median_fitted_probability": 0.008311927006500835,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.1111111111111111,
+          "median_cumulative_empirical_probability": 0.8751857355126301,
+          "q025_cumulative_empirical_probability": 0.3996171171171171,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 7,
+          "n_loci": 36,
+          "median_fitted_probability": 0.006682622670925339,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.25,
+          "median_cumulative_empirical_probability": 0.8751857355126301,
+          "q025_cumulative_empirical_probability": 0.3996171171171171,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 8,
+          "n_loci": 36,
+          "median_fitted_probability": 0.005696112601895861,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.3055555555555556,
+          "median_cumulative_empirical_probability": 0.8930163447251116,
+          "q025_cumulative_empirical_probability": 0.3996171171171171,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 9,
+          "n_loci": 33,
+          "median_fitted_probability": 0.004032755689445677,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.21212121212121213,
+          "median_cumulative_empirical_probability": 0.9152542372881356,
+          "q025_cumulative_empirical_probability": 0.3996171171171171,
+          "q975_cumulative_empirical_probability": 1.0
+        },
+        {
+          "rank": 10,
+          "n_loci": 33,
+          "median_fitted_probability": 0.003246208270514146,
+          "median_empirical_probability": 0.0,
+          "fraction_observed_at_least_once": 0.12121212121212122,
+          "median_cumulative_empirical_probability": 0.9182763744427935,
+          "q025_cumulative_empirical_probability": 0.3996171171171171,
+          "q975_cumulative_empirical_probability": 1.0
+        }
+      ],
+      "spearman_rho": [
+        0.725557268774149,
+        0.8003905296791061,
+        1.0,
+        0.7465254687430921,
+        0.7920349407187459,
+        0.5495319562599505,
+        0.648649304898973,
+        0.7092081432669752,
+        0.5393598899705937,
+        0.7610194341477615,
+        0.5921588471609647,
+        0.7006490497453708,
+        0.37370019738311344,
+        0.8152509713833304,
+        0.9132233209773138,
+        0.648649304898973,
+        0.9999999999999999,
+        0.5319951765989315,
+        0.7081421505253928,
+        0.5883224472900647,
+        0.45201238589016984,
+        0.825378700960959,
+        0.4719399037242695,
+        0.5222329678670935,
+        0.7027819284987274,
+        0.5883224472900647,
+        0.2977607242843649,
+        0.5145100586970258,
+        0.5033318263184052,
+        0.46015733935488656,
+        0.23497813499638723,
+        0.5896923870743754,
+        0.7503664793768668,
+        0.24652466565114894,
+        0.7776151894036842,
+        0.24607002807249062,
+        0.915810939779251
+      ],
+      "median_spearman_rho": 0.648649304898973,
+      "fraction_positive_spearman": 1.0
+    }
+  ],
+  "modal_contrast": [
+    {
+      "dataset": "ROS/MAP",
+      "arm": "armA",
+      "per_locus": [
+        {
+          "locus": "10_59978394_G_T",
+          "n_partners": 15,
+          "partner_hamming_distance": 15,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "11_60254475_G_A",
+          "n_partners": 30,
+          "partner_hamming_distance": 30,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "11_86089237_G_A",
+          "n_partners": 31,
+          "partner_hamming_distance": 31,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "14_52832135_A_G",
+          "n_partners": 38,
+          "partner_hamming_distance": 38,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "15_58764824_T_A",
+          "n_partners": 16,
+          "partner_hamming_distance": 16,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "15_63277703_C_T",
+          "n_partners": 2,
+          "partner_hamming_distance": 2,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "17_44364976_T_C",
+          "n_partners": 12,
+          "partner_hamming_distance": 12,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "17_46062125_A_C",
+          "n_partners": 1245,
+          "partner_hamming_distance": 1245,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "17_49373413_G_A",
+          "n_partners": 30,
+          "partner_hamming_distance": 30,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "17_5066645_C_T",
+          "n_partners": 22,
+          "partner_hamming_distance": 22,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "17_58331728_G_C",
+          "n_partners": 2,
+          "partner_hamming_distance": 2,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "17_63468418_C_T",
+          "n_partners": 9,
+          "partner_hamming_distance": 9,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "19_44946027_T_G",
+          "n_partners": 60,
+          "partner_hamming_distance": 60,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "19_48710247_G_A",
+          "n_partners": 35,
+          "partner_hamming_distance": 35,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "19_51234736_T_G",
+          "n_partners": 5,
+          "partner_hamming_distance": 5,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "19_54313903_C_A",
+          "n_partners": 9,
+          "partner_hamming_distance": 9,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "1_207577223_T_C",
+          "n_partners": 23,
+          "partner_hamming_distance": 23,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "20_56420643_C_T",
+          "n_partners": 18,
+          "partner_hamming_distance": 18,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "21_26148613_G_T",
+          "n_partners": 22,
+          "partner_hamming_distance": 22,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "2_127133851_A_C",
+          "n_partners": 1,
+          "partner_hamming_distance": 1,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "2_233173931_A_C",
+          "n_partners": 34,
+          "partner_hamming_distance": 34,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "5_157099320_A_G",
+          "n_partners": 21,
+          "partner_hamming_distance": 21,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "6_47584444_A_T",
+          "n_partners": 76,
+          "partner_hamming_distance": 76,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "7_100334426_C_T",
+          "n_partners": 7,
+          "partner_hamming_distance": 7,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "7_12229132_A_C",
+          "n_partners": 98,
+          "partner_hamming_distance": 98,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "8_144053248_G_A",
+          "n_partners": 2,
+          "partner_hamming_distance": 2,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "8_27608798_T_C",
+          "n_partners": 10,
+          "partner_hamming_distance": 10,
+          "partner_hamming_fraction": 1.0
+        }
+      ]
+    },
+    {
+      "dataset": "ROS/MAP",
+      "arm": "armB",
+      "per_locus": [
+        {
+          "locus": "10_11676714_A_G",
+          "n_partners": 8,
+          "partner_hamming_distance": 8,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "10_59978394_G_T",
+          "n_partners": 49,
+          "partner_hamming_distance": 49,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "11_121564878_T_C",
+          "n_partners": 10,
+          "partner_hamming_distance": 10,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "11_47358789_G_T",
+          "n_partners": 79,
+          "partner_hamming_distance": 79,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "11_60254475_G_A",
+          "n_partners": 175,
+          "partner_hamming_distance": 175,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "11_86089237_G_A",
+          "n_partners": 57,
+          "partner_hamming_distance": 57,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "14_52832135_A_G",
+          "n_partners": 128,
+          "partner_hamming_distance": 128,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "14_92472511_G_A",
+          "n_partners": 3,
+          "partner_hamming_distance": 3,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "15_58764824_T_A",
+          "n_partners": 59,
+          "partner_hamming_distance": 59,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "15_63277703_C_T",
+          "n_partners": 3,
+          "partner_hamming_distance": 3,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "17_44364976_T_C",
+          "n_partners": 17,
+          "partner_hamming_distance": 17,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "17_46062125_A_C",
+          "n_partners": 2561,
+          "partner_hamming_distance": 2561,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "17_49373413_G_A",
+          "n_partners": 87,
+          "partner_hamming_distance": 87,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "17_5066645_C_T",
+          "n_partners": 33,
+          "partner_hamming_distance": 33,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "17_58331728_G_C",
+          "n_partners": 3,
+          "partner_hamming_distance": 3,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "17_63468418_C_T",
+          "n_partners": 12,
+          "partner_hamming_distance": 12,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "19_1050875_A_G",
+          "n_partners": 1,
+          "partner_hamming_distance": 1,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "19_44908684_T_C",
+          "n_partners": 15,
+          "partner_hamming_distance": 15,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "19_44946027_T_G",
+          "n_partners": 84,
+          "partner_hamming_distance": 84,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "19_48710247_G_A",
+          "n_partners": 73,
+          "partner_hamming_distance": 73,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "19_51234736_T_G",
+          "n_partners": 6,
+          "partner_hamming_distance": 6,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "19_54313903_C_A",
+          "n_partners": 9,
+          "partner_hamming_distance": 9,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "1_207577223_T_C",
+          "n_partners": 23,
+          "partner_hamming_distance": 23,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "20_56420643_C_T",
+          "n_partners": 26,
+          "partner_hamming_distance": 26,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "21_25970679_C_T",
+          "n_partners": 68,
+          "partner_hamming_distance": 68,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "21_26148613_G_T",
+          "n_partners": 74,
+          "partner_hamming_distance": 74,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "2_127133851_A_C",
+          "n_partners": 5,
+          "partner_hamming_distance": 5,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "2_233173931_A_C",
+          "n_partners": 123,
+          "partner_hamming_distance": 123,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "4_11013198_A_G",
+          "n_partners": 18,
+          "partner_hamming_distance": 18,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "5_157099320_A_G",
+          "n_partners": 87,
+          "partner_hamming_distance": 87,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "6_32616036_G_A",
+          "n_partners": 35,
+          "partner_hamming_distance": 35,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "6_47584444_A_T",
+          "n_partners": 90,
+          "partner_hamming_distance": 90,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "7_100334426_C_T",
+          "n_partners": 16,
+          "partner_hamming_distance": 16,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "7_12229132_A_C",
+          "n_partners": 137,
+          "partner_hamming_distance": 137,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "7_143407238_G_C",
+          "n_partners": 9,
+          "partner_hamming_distance": 9,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "8_144053248_G_A",
+          "n_partners": 5,
+          "partner_hamming_distance": 5,
+          "partner_hamming_fraction": 1.0
+        },
+        {
+          "locus": "8_27608798_T_C",
+          "n_partners": 10,
+          "partner_hamming_distance": 10,
+          "partner_hamming_fraction": 1.0
+        }
+      ]
+    }
+  ]
+}

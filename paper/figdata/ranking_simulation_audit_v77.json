@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "n_files": 1620,
+  "n_expected_files": 1620,
+  "n_fit_unavailable": 0,
+  "n_empirical_alt_unavailable": 2,
+  "n_ld_sign_state_unavailable": 272,
+  "n_certified_truth_searches": 3240,
+  "n_certified_fitted_searches": 3240,
+  "n_nonunique_four_partner_top_ten": 2,
+  "n_problems": 0,
+  "problems": []
+}

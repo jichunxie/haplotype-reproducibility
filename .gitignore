@@ -1,0 +1,9 @@
+.DS_Store
+.mplconfig/
+__pycache__/
+*.py[cod]
+paper/main/figures/*.pdf
+paper/supp/supp-figures/*.pdf
+paper/supp/supp-tables/*.tex
+paper/main/table1_cohort_haplotype_agreement.tex
+paper/ranking-generated/

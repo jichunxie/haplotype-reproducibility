@@ -1,0 +1,4710 @@
+{
+  "script": "build_top10_empirical_v59.py",
+  "definition": {
+    "target": "top 10 under fitted q=1 law conditional on lead state 0",
+    "empirical_probability": "count among observed phased haplotypes with lead state 0 divided by number with that state",
+    "empirical_scope": "in-sample descriptive check; no smoothing",
+    "search_certificate": "exp(-N*p10)/p10 union bound"
+  },
+  "config": {
+    "top_l": 10,
+    "seed_base": 590731,
+    "initial_draws": 100000,
+    "maximum_draws": 2000000,
+    "batch": 10000,
+    "discovery_keep": 50,
+    "quadrature_order": 1024,
+    "refinement_order": 2048,
+    "delta": 1e-06
+  },
+  "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+  "arm": "armA",
+  "lead_state": 0,
+  "n_loci": 27,
+  "n_certified": 27,
+  "per_locus": [
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "10_59978394_G_T",
+      "n_haplotypes": 1006,
+      "n_variants": 17,
+      "n_haplotypes_with_conditioning_state": 449,
+      "conditioning_state_empirical_probability": 0.4463220675944334,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 2358219797,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 6873,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 1.7212824430023227e-157,
+        "screening_cutoff_count": 34,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 5.6022538030804525e-109,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 5299,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "000000",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.30162168350340135,
+          "q1_probability": 0.7396178215909939,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 354,
+          "empirical_probability_given_lead_state": 0.7884187082405345
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "000200",
+          "alternate_variant_ids": [
+            "10:59980299:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -2.9195585519156335,
+          "q1_probability": 0.053957501479272675,
+          "quadrature_1024_vs_2048_log_difference": -1.8696155734687636e-13,
+          "empirical_count_given_lead_state": 46,
+          "empirical_probability_given_lead_state": 0.10244988864142539
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "000800",
+          "alternate_variant_ids": [
+            "10:59980560:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.067713639079383,
+          "q1_probability": 0.006296800453726337,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "400000",
+          "alternate_variant_ids": [
+            "10:59979380:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.067713639079383,
+          "q1_probability": 0.006296800453726337,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "001000",
+          "alternate_variant_ids": [
+            "10:59981020:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.067713639079383,
+          "q1_probability": 0.006296800453726337,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "800000",
+          "alternate_variant_ids": [
+            "10:59979383:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.067713639079383,
+          "q1_probability": 0.006296800453726337,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "000a00",
+          "alternate_variant_ids": [
+            "10:59980299:A:G",
+            "10:59980560:T:C"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -5.608731814537269,
+          "q1_probability": 0.0036657152179520674,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "001200",
+          "alternate_variant_ids": [
+            "10:59980299:A:G",
+            "10:59981020:C:T"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -5.608731814537269,
+          "q1_probability": 0.0036657152179520674,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "800200",
+          "alternate_variant_ids": [
+            "10:59979383:A:G",
+            "10:59980299:A:G"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -5.608731814537269,
+          "q1_probability": 0.0036657152179520674,
+          "quadrature_1024_vs_2048_log_difference": -1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "400200",
+          "alternate_variant_ids": [
+            "10:59979380:T:C",
+            "10:59980299:A:G"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -5.608731814537269,
+          "q1_probability": 0.0036657152179520674,
+          "quadrature_1024_vs_2048_log_difference": -1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "53d9624478325f4b4a31a6a8577a89c1d941a325a37b78f469d12578249a52fc",
+      "coefficient_sha256": "c32e8d59c5407ab7bb44910204e4f93fbe82559ecc4d3263e7119d3e54560e6e"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "11_60254475_G_A",
+      "n_haplotypes": 1006,
+      "n_variants": 31,
+      "n_haplotypes_with_conditioning_state": 641,
+      "conditioning_state_empirical_probability": 0.6371769383697813,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 3550193615,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 11820,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 1.0813223731853149e-32,
+        "screening_cutoff_count": 23,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 4.152577562525791e-11,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 25937,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "fcffff7f",
+          "alternate_variant_ids": [
+            "11:60243540:C:T",
+            "11:60245200:A:T",
+            "11:60245978:A:G",
+            "11:60246201:G:A",
+            "11:60246384:G:A",
+            "11:60248914:T:A",
+            "11:60249459:A:G",
+            "11:60251677:C:T",
+            "11:60251688:A:C",
+            "11:60252639:T:G",
+            "11:60255614:C:A",
+            "11:60256535:C:T",
+            "11:60258092:A:G",
+            "11:60259140:G:T",
+            "11:60260669:C:T",
+            "11:60261467:C:T",
+            "11:60262458:T:A",
+            "11:60262476:G:A",
+            "11:60262984:T:C",
+            "11:60263083:G:A",
+            "11:60263086:C:T",
+            "11:60263797:G:C",
+            "11:60263926:T:C",
+            "11:60264003:C:T",
+            "11:60265898:C:T",
+            "11:60265975:C:T",
+            "11:60266956:C:T",
+            "11:60272444:T:A",
+            "11:60273823:T:A"
+          ],
+          "n_alternate": 29,
+          "q1_log_probability": -0.22456915838521652,
+          "q1_probability": 0.7988603268992285,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 590,
+          "empirical_probability_given_lead_state": 0.9204368174726989
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "02000000",
+          "alternate_variant_ids": [
+            "11:60240678:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -3.525157560341473,
+          "q1_probability": 0.029447167297836425,
+          "quadrature_1024_vs_2048_log_difference": -1.8474111129762605e-13,
+          "empirical_count_given_lead_state": 36,
+          "empirical_probability_given_lead_state": 0.056162246489859596
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "feffff7f",
+          "alternate_variant_ids": [
+            "11:60240678:T:C",
+            "11:60243540:C:T",
+            "11:60245200:A:T",
+            "11:60245978:A:G",
+            "11:60246201:G:A",
+            "11:60246384:G:A",
+            "11:60248914:T:A",
+            "11:60249459:A:G",
+            "11:60251677:C:T",
+            "11:60251688:A:C",
+            "11:60252639:T:G",
+            "11:60255614:C:A",
+            "11:60256535:C:T",
+            "11:60258092:A:G",
+            "11:60259140:G:T",
+            "11:60260669:C:T",
+            "11:60261467:C:T",
+            "11:60262458:T:A",
+            "11:60262476:G:A",
+            "11:60262984:T:C",
+            "11:60263083:G:A",
+            "11:60263086:C:T",
+            "11:60263797:G:C",
+            "11:60263926:T:C",
+            "11:60264003:C:T",
+            "11:60265898:C:T",
+            "11:60265975:C:T",
+            "11:60266956:C:T",
+            "11:60272444:T:A",
+            "11:60273823:T:A"
+          ],
+          "n_alternate": 30,
+          "q1_log_probability": -5.027615200847318,
+          "q1_probability": 0.006554422929227828,
+          "quadrature_1024_vs_2048_log_difference": -1.5631940186722204e-13,
+          "empirical_count_given_lead_state": 6,
+          "empirical_probability_given_lead_state": 0.0093603744149766
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "00000000",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -6.25694763760101,
+          "q1_probability": 0.0019170885239617615,
+          "quadrature_1024_vs_2048_log_difference": -3.1175062531474396e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "fcffff5f",
+          "alternate_variant_ids": [
+            "11:60243540:C:T",
+            "11:60245200:A:T",
+            "11:60245978:A:G",
+            "11:60246201:G:A",
+            "11:60246384:G:A",
+            "11:60248914:T:A",
+            "11:60249459:A:G",
+            "11:60251677:C:T",
+            "11:60251688:A:C",
+            "11:60252639:T:G",
+            "11:60255614:C:A",
+            "11:60256535:C:T",
+            "11:60258092:A:G",
+            "11:60259140:G:T",
+            "11:60260669:C:T",
+            "11:60261467:C:T",
+            "11:60262458:T:A",
+            "11:60262476:G:A",
+            "11:60262984:T:C",
+            "11:60263083:G:A",
+            "11:60263086:C:T",
+            "11:60263797:G:C",
+            "11:60263926:T:C",
+            "11:60264003:C:T",
+            "11:60265898:C:T",
+            "11:60265975:C:T",
+            "11:60266956:C:T",
+            "11:60273823:T:A"
+          ],
+          "n_alternate": 28,
+          "q1_log_probability": -6.621072065607252,
+          "q1_probability": 0.001332002186155702,
+          "quadrature_1024_vs_2048_log_difference": 2.842170943040401e-14,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "7cffff7f",
+          "alternate_variant_ids": [
+            "11:60243540:C:T",
+            "11:60245200:A:T",
+            "11:60245978:A:G",
+            "11:60246201:G:A",
+            "11:60246384:G:A",
+            "11:60249459:A:G",
+            "11:60251677:C:T",
+            "11:60251688:A:C",
+            "11:60252639:T:G",
+            "11:60255614:C:A",
+            "11:60256535:C:T",
+            "11:60258092:A:G",
+            "11:60259140:G:T",
+            "11:60260669:C:T",
+            "11:60261467:C:T",
+            "11:60262458:T:A",
+            "11:60262476:G:A",
+            "11:60262984:T:C",
+            "11:60263083:G:A",
+            "11:60263086:C:T",
+            "11:60263797:G:C",
+            "11:60263926:T:C",
+            "11:60264003:C:T",
+            "11:60265898:C:T",
+            "11:60265975:C:T",
+            "11:60266956:C:T",
+            "11:60272444:T:A",
+            "11:60273823:T:A"
+          ],
+          "n_alternate": 28,
+          "q1_log_probability": -6.900762263923032,
+          "q1_probability": 0.0010070175232844022,
+          "quadrature_1024_vs_2048_log_difference": 9.769962616701378e-14,
+          "empirical_count_given_lead_state": 2,
+          "empirical_probability_given_lead_state": 0.0031201248049922
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "fcf7ff7f",
+          "alternate_variant_ids": [
+            "11:60243540:C:T",
+            "11:60245200:A:T",
+            "11:60245978:A:G",
+            "11:60246201:G:A",
+            "11:60246384:G:A",
+            "11:60248914:T:A",
+            "11:60249459:A:G",
+            "11:60251677:C:T",
+            "11:60251688:A:C",
+            "11:60255614:C:A",
+            "11:60256535:C:T",
+            "11:60258092:A:G",
+            "11:60259140:G:T",
+            "11:60260669:C:T",
+            "11:60261467:C:T",
+            "11:60262458:T:A",
+            "11:60262476:G:A",
+            "11:60262984:T:C",
+            "11:60263083:G:A",
+            "11:60263086:C:T",
+            "11:60263797:G:C",
+            "11:60263926:T:C",
+            "11:60264003:C:T",
+            "11:60265898:C:T",
+            "11:60265975:C:T",
+            "11:60266956:C:T",
+            "11:60272444:T:A",
+            "11:60273823:T:A"
+          ],
+          "n_alternate": 28,
+          "q1_log_probability": -6.90076226392305,
+          "q1_probability": 0.0010070175232843842,
+          "quadrature_1024_vs_2048_log_difference": 9.769962616701378e-14,
+          "empirical_count_given_lead_state": 2,
+          "empirical_probability_given_lead_state": 0.0031201248049922
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "fcfffe7f",
+          "alternate_variant_ids": [
+            "11:60243540:C:T",
+            "11:60245200:A:T",
+            "11:60245978:A:G",
+            "11:60246201:G:A",
+            "11:60246384:G:A",
+            "11:60248914:T:A",
+            "11:60249459:A:G",
+            "11:60251677:C:T",
+            "11:60251688:A:C",
+            "11:60252639:T:G",
+            "11:60255614:C:A",
+            "11:60256535:C:T",
+            "11:60258092:A:G",
+            "11:60259140:G:T",
+            "11:60261467:C:T",
+            "11:60262458:T:A",
+            "11:60262476:G:A",
+            "11:60262984:T:C",
+            "11:60263083:G:A",
+            "11:60263086:C:T",
+            "11:60263797:G:C",
+            "11:60263926:T:C",
+            "11:60264003:C:T",
+            "11:60265898:C:T",
+            "11:60265975:C:T",
+            "11:60266956:C:T",
+            "11:60272444:T:A",
+            "11:60273823:T:A"
+          ],
+          "n_alternate": 28,
+          "q1_log_probability": -7.121859829264809,
+          "q1_probability": 0.0008072639809331249,
+          "quadrature_1024_vs_2048_log_difference": 1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "fcffff3f",
+          "alternate_variant_ids": [
+            "11:60243540:C:T",
+            "11:60245200:A:T",
+            "11:60245978:A:G",
+            "11:60246201:G:A",
+            "11:60246384:G:A",
+            "11:60248914:T:A",
+            "11:60249459:A:G",
+            "11:60251677:C:T",
+            "11:60251688:A:C",
+            "11:60252639:T:G",
+            "11:60255614:C:A",
+            "11:60256535:C:T",
+            "11:60258092:A:G",
+            "11:60259140:G:T",
+            "11:60260669:C:T",
+            "11:60261467:C:T",
+            "11:60262458:T:A",
+            "11:60262476:G:A",
+            "11:60262984:T:C",
+            "11:60263083:G:A",
+            "11:60263086:C:T",
+            "11:60263797:G:C",
+            "11:60263926:T:C",
+            "11:60264003:C:T",
+            "11:60265898:C:T",
+            "11:60265975:C:T",
+            "11:60266956:C:T",
+            "11:60272444:T:A"
+          ],
+          "n_alternate": 28,
+          "q1_log_probability": -7.121859829264809,
+          "q1_probability": 0.0008072639809331249,
+          "quadrature_1024_vs_2048_log_difference": 1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "fcffff6f",
+          "alternate_variant_ids": [
+            "11:60243540:C:T",
+            "11:60245200:A:T",
+            "11:60245978:A:G",
+            "11:60246201:G:A",
+            "11:60246384:G:A",
+            "11:60248914:T:A",
+            "11:60249459:A:G",
+            "11:60251677:C:T",
+            "11:60251688:A:C",
+            "11:60252639:T:G",
+            "11:60255614:C:A",
+            "11:60256535:C:T",
+            "11:60258092:A:G",
+            "11:60259140:G:T",
+            "11:60260669:C:T",
+            "11:60261467:C:T",
+            "11:60262458:T:A",
+            "11:60262476:G:A",
+            "11:60262984:T:C",
+            "11:60263083:G:A",
+            "11:60263086:C:T",
+            "11:60263797:G:C",
+            "11:60263926:T:C",
+            "11:60264003:C:T",
+            "11:60265898:C:T",
+            "11:60265975:C:T",
+            "11:60272444:T:A",
+            "11:60273823:T:A"
+          ],
+          "n_alternate": 28,
+          "q1_log_probability": -7.121859829264809,
+          "q1_probability": 0.0008072639809331249,
+          "quadrature_1024_vs_2048_log_difference": 1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "9906b3b252de8ff87862728002a05c7f9b7cbb88cebae7892660c16a6486c13c",
+      "coefficient_sha256": "b2bb25c086e9aa14b34217659608c68536bb9ef703118169a625f2dc396b3b49"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "11_86089237_G_A",
+      "n_haplotypes": 1006,
+      "n_variants": 32,
+      "n_haplotypes_with_conditioning_state": 351,
+      "conditioning_state_empirical_probability": 0.3489065606361829,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 1561351859,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 22602,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 5.731323559145976e-79,
+        "screening_cutoff_count": 29,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 4.748085359060807e-44,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 10781,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "00000000",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.45245001382042815,
+          "q1_probability": 0.6360678659791765,
+          "quadrature_1024_vs_2048_log_difference": -1.8696155734687636e-13,
+          "empirical_count_given_lead_state": 276,
+          "empirical_probability_given_lead_state": 0.7863247863247863
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "00000080",
+          "alternate_variant_ids": [
+            "11:86126627:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.041176495078985,
+          "q1_probability": 0.017576781249837824,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "00000010",
+          "alternate_variant_ids": [
+            "11:86117509:C:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.141890766932771,
+          "q1_probability": 0.015892773547575456,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "00000020",
+          "alternate_variant_ids": [
+            "11:86119115:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.145062207779012,
+          "q1_probability": 0.015842450397013548,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "00000002",
+          "alternate_variant_ids": [
+            "11:86109035:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.325401624531001,
+          "q1_probability": 0.013228236245347849,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "000000a0",
+          "alternate_variant_ids": [
+            "11:86119115:T:C",
+            "11:86126627:T:C"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -6.038310363111559,
+          "q1_probability": 0.0023855862848486766,
+          "quadrature_1024_vs_2048_log_difference": -1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "00000090",
+          "alternate_variant_ids": [
+            "11:86117509:C:G",
+            "11:86126627:T:C"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -6.045582503441416,
+          "q1_probability": 0.0023683008936880496,
+          "quadrature_1024_vs_2048_log_difference": -1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "00000030",
+          "alternate_variant_ids": [
+            "11:86117509:C:G",
+            "11:86119115:T:C"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -6.095367997841973,
+          "q1_probability": 0.002253280785657045,
+          "quadrature_1024_vs_2048_log_difference": -1.8385293287792592e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "00000082",
+          "alternate_variant_ids": [
+            "11:86109035:A:G",
+            "11:86126627:T:C"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -6.234710799371777,
+          "q1_probability": 0.001960196022282725,
+          "quadrature_1024_vs_2048_log_difference": -1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "00000022",
+          "alternate_variant_ids": [
+            "11:86109035:A:G",
+            "11:86119115:T:C"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -6.284799498464921,
+          "q1_probability": 0.0018644307535330689,
+          "quadrature_1024_vs_2048_log_difference": -1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "652fa16272f2b5c19a46b36a9c98de2c34ee6ff3afc0b4cc1268bbb298c4bae4",
+      "coefficient_sha256": "f115fc0b298bdd33d65fa4ae57b396cb888bd4f74bd5b7a2bd6ea96e71bb6df1"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "14_52832135_A_G",
+      "n_haplotypes": 1006,
+      "n_variants": 39,
+      "n_haplotypes_with_conditioning_state": 106,
+      "conditioning_state_empirical_probability": 0.10536779324055666,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 3236324193,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 27246,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 2.5524207480982824e-86,
+        "screening_cutoff_count": 29,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 2.4871507080699804e-50,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 9846,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "0048200040",
+          "alternate_variant_ids": [
+            "14:52838033:C:T",
+            "14:52838908:G:A",
+            "14:52845284:C:T",
+            "14:52853187:G:A"
+          ],
+          "n_alternate": 4,
+          "q1_log_probability": -0.4815268471771019,
+          "q1_probability": 0.6178393250373702,
+          "quadrature_1024_vs_2048_log_difference": -1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 93,
+          "empirical_probability_given_lead_state": 0.8773584905660378
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "0448200040",
+          "alternate_variant_ids": [
+            "14:52827601:T:C",
+            "14:52838033:C:T",
+            "14:52838908:G:A",
+            "14:52845284:C:T",
+            "14:52853187:G:A"
+          ],
+          "n_alternate": 5,
+          "q1_log_probability": -4.600894161793853,
+          "q1_probability": 0.010042851794303788,
+          "quadrature_1024_vs_2048_log_difference": -2.0605739337042905e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "0049200040",
+          "alternate_variant_ids": [
+            "14:52832664:G:A",
+            "14:52838033:C:T",
+            "14:52838908:G:A",
+            "14:52845284:C:T",
+            "14:52853187:G:A"
+          ],
+          "n_alternate": 5,
+          "q1_log_probability": -4.631250492125005,
+          "q1_probability": 0.009742568476633394,
+          "quadrature_1024_vs_2048_log_difference": -2.2026824808563106e-13,
+          "empirical_count_given_lead_state": 2,
+          "empirical_probability_given_lead_state": 0.018867924528301886
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "0248200040",
+          "alternate_variant_ids": [
+            "14:52826589:G:T",
+            "14:52838033:C:T",
+            "14:52838908:G:A",
+            "14:52845284:C:T",
+            "14:52853187:G:A"
+          ],
+          "n_alternate": 5,
+          "q1_log_probability": -5.127720404815991,
+          "q1_probability": 0.0059300632209951225,
+          "quadrature_1024_vs_2048_log_difference": -2.149391775674303e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "0040200040",
+          "alternate_variant_ids": [
+            "14:52838908:G:A",
+            "14:52845284:C:T",
+            "14:52853187:G:A"
+          ],
+          "n_alternate": 3,
+          "q1_log_probability": -5.654826057134363,
+          "q1_probability": 0.0035005819351064124,
+          "quadrature_1024_vs_2048_log_difference": -3.3217872896784684e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "0008200040",
+          "alternate_variant_ids": [
+            "14:52838033:C:T",
+            "14:52845284:C:T",
+            "14:52853187:G:A"
+          ],
+          "n_alternate": 3,
+          "q1_log_probability": -5.654826057134363,
+          "q1_probability": 0.0035005819351064124,
+          "quadrature_1024_vs_2048_log_difference": -3.3217872896784684e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "feb7dfff3f",
+          "alternate_variant_ids": [
+            "14:52826589:G:T",
+            "14:52827601:T:C",
+            "14:52828496:G:A",
+            "14:52828988:G:A",
+            "14:52829232:T:A",
+            "14:52830290:A:G",
+            "14:52831559:A:G",
+            "14:52832664:G:A",
+            "14:52832848:T:C",
+            "14:52833821:G:A",
+            "14:52838153:C:T",
+            "14:52838855:T:G",
+            "14:52839650:A:G",
+            "14:52839767:C:T",
+            "14:52840535:G:A",
+            "14:52842826:G:T",
+            "14:52844682:A:C",
+            "14:52844834:G:A",
+            "14:52845388:A:C",
+            "14:52845471:A:T",
+            "14:52845601:A:G",
+            "14:52845624:C:T",
+            "14:52846687:T:C",
+            "14:52846943:G:C",
+            "14:52846962:C:T",
+            "14:52846993:C:G",
+            "14:52847772:C:G",
+            "14:52848126:T:C",
+            "14:52848462:T:C",
+            "14:52849321:C:T",
+            "14:52850622:C:T",
+            "14:52851716:A:G",
+            "14:52852565:C:T",
+            "14:52853114:A:C"
+          ],
+          "n_alternate": 34,
+          "q1_log_probability": -5.736859623377743,
+          "q1_probability": 0.003224879727018005,
+          "quadrature_1024_vs_2048_log_difference": -2.4158453015843406e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "2048200040",
+          "alternate_variant_ids": [
+            "14:52829232:T:A",
+            "14:52838033:C:T",
+            "14:52838908:G:A",
+            "14:52845284:C:T",
+            "14:52853187:G:A"
+          ],
+          "n_alternate": 5,
+          "q1_log_probability": -6.123106901292639,
+          "q1_probability": 0.002191636177055949,
+          "quadrature_1024_vs_2048_log_difference": -3.0375701953744283e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "8048200040",
+          "alternate_variant_ids": [
+            "14:52831559:A:G",
+            "14:52838033:C:T",
+            "14:52838908:G:A",
+            "14:52845284:C:T",
+            "14:52853187:G:A"
+          ],
+          "n_alternate": 5,
+          "q1_log_probability": -6.123106901292639,
+          "q1_probability": 0.002191636177055949,
+          "quadrature_1024_vs_2048_log_difference": -3.0375701953744283e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "4048200040",
+          "alternate_variant_ids": [
+            "14:52830290:A:G",
+            "14:52838033:C:T",
+            "14:52838908:G:A",
+            "14:52845284:C:T",
+            "14:52853187:G:A"
+          ],
+          "n_alternate": 5,
+          "q1_log_probability": -6.198323420506263,
+          "q1_probability": 0.0020328359919615673,
+          "quadrature_1024_vs_2048_log_difference": -3.3928415632544784e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "541dce13ec91a99a190fd3cafba015c3501af3225bd1ef8c00f9de2e4c4d2488",
+      "coefficient_sha256": "f52cf195debe986c73d953d472a5e0974366a0f31a0a61aaaed8c363e1249da5"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "15_58764824_T_A",
+      "n_haplotypes": 1006,
+      "n_variants": 17,
+      "n_haplotypes_with_conditioning_state": 699,
+      "conditioning_state_empirical_probability": 0.694831013916501,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 1105074077,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 5668,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 1.431407703928083e-59,
+        "screening_cutoff_count": 18,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 1.3129723334510336e-36,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 14342,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "001000",
+          "alternate_variant_ids": [
+            "15:58758183:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -0.16498561067577372,
+          "q1_probability": 0.8479059047931131,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 627,
+          "empirical_probability_given_lead_state": 0.8969957081545065
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "001001",
+          "alternate_variant_ids": [
+            "15:58758183:C:T",
+            "15:58781591:C:A"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -3.297456417758431,
+          "q1_probability": 0.036977102185634325,
+          "quadrature_1024_vs_2048_log_difference": -1.8784973576657649e-13,
+          "empirical_count_given_lead_state": 39,
+          "empirical_probability_given_lead_state": 0.055793991416309016
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "001200",
+          "alternate_variant_ids": [
+            "15:58753575:A:G",
+            "15:58758183:C:T"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -6.182778667973341,
+          "q1_probability": 0.0020646828085536958,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.001430615164520744
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "001800",
+          "alternate_variant_ids": [
+            "15:58756822:A:G",
+            "15:58758183:C:T"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -6.378278152791249,
+          "q1_probability": 0.001698044213611963,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "003000",
+          "alternate_variant_ids": [
+            "15:58758183:C:T",
+            "15:58760011:T:C"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -6.437333014536341,
+          "q1_probability": 0.0016006699565440086,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "001400",
+          "alternate_variant_ids": [
+            "15:58753964:C:G",
+            "15:58758183:C:T"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -6.437333014536341,
+          "q1_probability": 0.0016006699565440086,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "000000",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -6.437333014536341,
+          "q1_probability": 0.0016006699565440086,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "feef01",
+          "alternate_variant_ids": [
+            "15:58692965:T:G",
+            "15:58693668:C:T",
+            "15:58693705:A:T",
+            "15:58693802:A:T",
+            "15:58723689:C:G",
+            "15:58723762:A:T",
+            "15:58724116:A:G",
+            "15:58749813:T:C",
+            "15:58753575:A:G",
+            "15:58753964:C:G",
+            "15:58756822:A:G",
+            "15:58760011:T:C",
+            "15:58761146:T:G",
+            "15:58763611:T:C",
+            "15:58781591:C:A"
+          ],
+          "n_alternate": 15,
+          "q1_log_probability": -6.460441656864289,
+          "q1_probability": 0.0015641047602201366,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "009000",
+          "alternate_variant_ids": [
+            "15:58758183:C:T",
+            "15:58763611:T:C"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -6.476440486947691,
+          "q1_probability": 0.0015392800267893553,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "005000",
+          "alternate_variant_ids": [
+            "15:58758183:C:T",
+            "15:58761146:T:G"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -6.556742103096926,
+          "q1_probability": 0.0014205060422134463,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "c813aaf48a2ca24eac737e12320d33c60bd21b44227905e277efe8cadd3c6d75",
+      "coefficient_sha256": "5c03dd63a60a0c6d51a7de452d2dabd4af516237e95189b359a6708b79faa8a0"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "15_63277703_C_T",
+      "n_haplotypes": 1006,
+      "n_variants": 3,
+      "n_haplotypes_with_conditioning_state": 870,
+      "conditioning_state_empirical_probability": 0.8648111332007953,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 4,
+        "reason_fewer_than_requested": "fewer than 10 possible haplotypes after fixing the lead to ALT",
+        "seed": 2731801937,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 4,
+        "candidate_pool_size": 4,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 1.1715979555322388e-250,
+        "screening_cutoff_count": 0,
+        "screen_was_truncated": false,
+        "screening_union_bound_at_tenth_probability": 1.1715979555322388e-250,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 3267,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "00",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.019849531148964206,
+          "q1_probability": 0.9803461737717492,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 866,
+          "empirical_probability_given_lead_state": 0.9954022988505747
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "02",
+          "alternate_variant_ids": [
+            "15:63279621:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.932238781228023,
+          "q1_probability": 0.00721034281810665,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "04",
+          "alternate_variant_ids": [
+            "15:63303679:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.015077692688513,
+          "q1_probability": 0.006637116361765757,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 4,
+          "empirical_probability_given_lead_state": 0.004597701149425287
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "06",
+          "alternate_variant_ids": [
+            "15:63279621:C:T",
+            "15:63303679:T:C"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -5.148800196545495,
+          "q1_probability": 0.005806367048541089,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "ba8fe003e0716b52e87915b2618cfcd4f6088ea96ffaa01d0ff873775bad04b3",
+      "coefficient_sha256": "e40b6a412e5f6b7b0b55995a9ed6a7cdeab7ee1f16870b6c678f8f512a726a13"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "17_44364976_T_C",
+      "n_haplotypes": 1006,
+      "n_variants": 13,
+      "n_haplotypes_with_conditioning_state": 598,
+      "conditioning_state_empirical_probability": 0.5944333996023857,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 1433470436,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 2254,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 1.652811255962706e-67,
+        "screening_cutoff_count": 21,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 6.707882524766434e-41,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 12642,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "0000",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.11072213310134593,
+          "q1_probability": 0.8951874573359979,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 584,
+          "empirical_probability_given_lead_state": 0.9765886287625418
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "0200",
+          "alternate_variant_ids": [
+            "17:44357262:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.302509621709636,
+          "q1_probability": 0.013534549754970327,
+          "quadrature_1024_vs_2048_log_difference": -1.8918200339612667e-13,
+          "empirical_count_given_lead_state": 7,
+          "empirical_probability_given_lead_state": 0.011705685618729096
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "1000",
+          "alternate_variant_ids": [
+            "17:44366416:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.1105561854289245,
+          "q1_probability": 0.006032726675664298,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "0800",
+          "alternate_variant_ids": [
+            "17:44360386:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.06561276967714,
+          "q1_probability": 0.00232133513484461,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "0400",
+          "alternate_variant_ids": [
+            "17:44360314:C:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.06561276967714,
+          "q1_probability": 0.00232133513484461,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "1200",
+          "alternate_variant_ids": [
+            "17:44357262:A:G",
+            "17:44366416:T:C"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -6.352200183196315,
+          "q1_probability": 0.0017429081972968365,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "2000",
+          "alternate_variant_ids": [
+            "17:44369052:G:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.37921961027726,
+          "q1_probability": 0.0016964463294634998,
+          "quadrature_1024_vs_2048_log_difference": -1.8918200339612667e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "0002",
+          "alternate_variant_ids": [
+            "17:44375697:A:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.43645760483728,
+          "q1_probability": 0.0016020718120583948,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "8000",
+          "alternate_variant_ids": [
+            "17:44372421:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.43645760483728,
+          "q1_probability": 0.0016020718120583948,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "0004",
+          "alternate_variant_ids": [
+            "17:44376875:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.43645760483728,
+          "q1_probability": 0.0016020718120583948,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "9a482b5d8f438de3cf704546037ad475ebdca3f01313add234bf150ba8b935d9",
+      "coefficient_sha256": "8063e76988d103a02f194abed47ecb27c16c22e9eb2d7077bcc85139fd4e39fc"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "17_46062125_A_C",
+      "n_haplotypes": 1006,
+      "n_variants": 1286,
+      "n_haplotypes_with_conditioning_state": 750,
+      "conditioning_state_empirical_probability": 0.7455268389662028,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 541181220,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 57063,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 2.7032330339651906e-46,
+        "screening_cutoff_count": 42,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 3.1366757074992627e-11,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 18450,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "0000000000000000000000000000000000000000000000000000410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "alternate_variant_ids": [
+            "17:45948522:C:A",
+            "17:45949182:T:C"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -1.0489896743028075,
+          "q1_probability": 0.3502914788725445,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 631,
+          "empirical_probability_given_lead_state": 0.8413333333333334
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "0000000000000000000000000000000000000000000000000000410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000",
+          "alternate_variant_ids": [
+            "17:45948522:C:A",
+            "17:45949182:T:C",
+            "17:46231181:C:A"
+          ],
+          "n_alternate": 3,
+          "q1_log_probability": -6.361676533097428,
+          "q1_probability": 0.0017264698003896602,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "0000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "alternate_variant_ids": [
+            "17:45949182:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.532568044501663,
+          "q1_probability": 0.0014552638646850389,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 8,
+          "empirical_probability_given_lead_state": 0.010666666666666666
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "0000000000000000000000000000000000000000000000000000410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020",
+          "alternate_variant_ids": [
+            "17:45948522:C:A",
+            "17:45949182:T:C",
+            "17:46252270:T:C"
+          ],
+          "n_alternate": 3,
+          "q1_log_probability": -6.578296431856481,
+          "q1_probability": 0.001390215605696235,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.0013333333333333333
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "0000000000000000000000000000000000000000000000000000410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008",
+          "alternate_variant_ids": [
+            "17:45948522:C:A",
+            "17:45949182:T:C",
+            "17:46244161:C:T"
+          ],
+          "n_alternate": 3,
+          "q1_log_probability": -6.624677576171092,
+          "q1_probability": 0.0013272082856252353,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "0000000000000000000000000000000000000000000000000000410000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "alternate_variant_ids": [
+            "17:45948522:C:A",
+            "17:45949182:T:C",
+            "17:46014622:T:C"
+          ],
+          "n_alternate": 3,
+          "q1_log_probability": -6.657739851571368,
+          "q1_probability": 0.001284045226028085,
+          "quadrature_1024_vs_2048_log_difference": -1.8918200339612667e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "0000000000000000000000000000000000000000000000000000410000000000000000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "alternate_variant_ids": [
+            "17:45948522:C:A",
+            "17:45949182:T:C",
+            "17:46019187:G:A"
+          ],
+          "n_alternate": 3,
+          "q1_log_probability": -6.72016660780297,
+          "q1_probability": 0.0012063372120217242,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.0013333333333333333
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "0000000000000000000000000000000000000000000800000000410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "alternate_variant_ids": [
+            "17:45941122:T:C",
+            "17:45948522:C:A",
+            "17:45949182:T:C"
+          ],
+          "n_alternate": 3,
+          "q1_log_probability": -6.733009664371101,
+          "q1_probability": 0.0011909432195208434,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 4,
+          "empirical_probability_given_lead_state": 0.005333333333333333
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "0000000000000000000000000000000000000000000000000000410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000",
+          "alternate_variant_ids": [
+            "17:45948522:C:A",
+            "17:45949182:T:C",
+            "17:46228451:T:C"
+          ],
+          "n_alternate": 3,
+          "q1_log_probability": -6.752056404688624,
+          "q1_probability": 0.0011684742924610312,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "0000000000000000000000000000000000000000000000000000410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000",
+          "alternate_variant_ids": [
+            "17:45948522:C:A",
+            "17:45949182:T:C",
+            "17:46229888:A:G"
+          ],
+          "n_alternate": 3,
+          "q1_log_probability": -6.79691734351359,
+          "q1_probability": 0.0011172138314457783,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "9730ddf00b8590c715128b819fc70a90c2083bfca92ca128c26bd77cf3cfa160",
+      "coefficient_sha256": "ebfe28d173cf2e2a54e7489a94fe2e83ef083d4934d985c15a76663c8054c572"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "17_49373413_G_A",
+      "n_haplotypes": 1006,
+      "n_variants": 32,
+      "n_haplotypes_with_conditioning_state": 539,
+      "conditioning_state_empirical_probability": 0.5357852882703777,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 490998008,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 10822,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 8.003238043145194e-52,
+        "screening_cutoff_count": 19,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 4.6046952587426706e-29,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 16491,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "fe000000",
+          "alternate_variant_ids": [
+            "17:49299905:T:C",
+            "17:49301007:A:G",
+            "17:49301404:C:T",
+            "17:49301409:C:T",
+            "17:49313928:T:C",
+            "17:49319961:T:C",
+            "17:49320217:A:G"
+          ],
+          "n_alternate": 7,
+          "q1_log_probability": -0.19394522937608494,
+          "q1_probability": 0.823703017761322,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 509,
+          "empirical_probability_given_lead_state": 0.9443413729128015
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "00ffffff",
+          "alternate_variant_ids": [
+            "17:49322238:C:G",
+            "17:49326191:T:C",
+            "17:49326378:G:C",
+            "17:49329551:A:G",
+            "17:49329709:A:C",
+            "17:49331312:G:A",
+            "17:49333741:A:G",
+            "17:49334625:A:G",
+            "17:49341336:T:C",
+            "17:49344007:G:C",
+            "17:49344008:C:T",
+            "17:49344147:G:A",
+            "17:49350149:T:C",
+            "17:49350837:G:A",
+            "17:49351211:A:C",
+            "17:49353734:T:C",
+            "17:49355215:T:C",
+            "17:49355517:C:T",
+            "17:49359450:A:T",
+            "17:49365051:T:C",
+            "17:49366218:C:T",
+            "17:49366751:T:C",
+            "17:49367059:T:G",
+            "17:49367080:T:C"
+          ],
+          "n_alternate": 24,
+          "q1_log_probability": -4.270763486969919,
+          "q1_probability": 0.013971112318124663,
+          "quadrature_1024_vs_2048_log_difference": -1.8474111129762605e-13,
+          "empirical_count_given_lead_state": 6,
+          "empirical_probability_given_lead_state": 0.011131725417439703
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "fe000008",
+          "alternate_variant_ids": [
+            "17:49299905:T:C",
+            "17:49301007:A:G",
+            "17:49301404:C:T",
+            "17:49301409:C:T",
+            "17:49313928:T:C",
+            "17:49319961:T:C",
+            "17:49320217:A:G",
+            "17:49365051:T:C"
+          ],
+          "n_alternate": 8,
+          "q1_log_probability": -4.999037910705843,
+          "q1_probability": 0.006744432625133313,
+          "quadrature_1024_vs_2048_log_difference": -1.7674750552032492e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.0018552875695732839
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "fe000004",
+          "alternate_variant_ids": [
+            "17:49299905:T:C",
+            "17:49301007:A:G",
+            "17:49301404:C:T",
+            "17:49301409:C:T",
+            "17:49313928:T:C",
+            "17:49319961:T:C",
+            "17:49320217:A:G",
+            "17:49359450:A:T"
+          ],
+          "n_alternate": 8,
+          "q1_log_probability": -5.8955913162818465,
+          "q1_probability": 0.0027515488263031773,
+          "quadrature_1024_vs_2048_log_difference": -1.6697754290362354e-13,
+          "empirical_count_given_lead_state": 4,
+          "empirical_probability_given_lead_state": 0.0074211502782931356
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "fe000080",
+          "alternate_variant_ids": [
+            "17:49299905:T:C",
+            "17:49301007:A:G",
+            "17:49301404:C:T",
+            "17:49301409:C:T",
+            "17:49313928:T:C",
+            "17:49319961:T:C",
+            "17:49320217:A:G",
+            "17:49367080:T:C"
+          ],
+          "n_alternate": 8,
+          "q1_log_probability": -6.166391864520907,
+          "q1_probability": 0.0020987950922364824,
+          "quadrature_1024_vs_2048_log_difference": -1.652011860642233e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "fe000040",
+          "alternate_variant_ids": [
+            "17:49299905:T:C",
+            "17:49301007:A:G",
+            "17:49301404:C:T",
+            "17:49301409:C:T",
+            "17:49313928:T:C",
+            "17:49319961:T:C",
+            "17:49320217:A:G",
+            "17:49367059:T:G"
+          ],
+          "n_alternate": 8,
+          "q1_log_probability": -6.166391864520907,
+          "q1_probability": 0.0020987950922364824,
+          "quadrature_1024_vs_2048_log_difference": -1.652011860642233e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "fe000020",
+          "alternate_variant_ids": [
+            "17:49299905:T:C",
+            "17:49301007:A:G",
+            "17:49301404:C:T",
+            "17:49301409:C:T",
+            "17:49313928:T:C",
+            "17:49319961:T:C",
+            "17:49320217:A:G",
+            "17:49366751:T:C"
+          ],
+          "n_alternate": 8,
+          "q1_log_probability": -6.166391864520907,
+          "q1_probability": 0.0020987950922364824,
+          "quadrature_1024_vs_2048_log_difference": -1.652011860642233e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "de000000",
+          "alternate_variant_ids": [
+            "17:49299905:T:C",
+            "17:49301007:A:G",
+            "17:49301404:C:T",
+            "17:49301409:C:T",
+            "17:49319961:T:C",
+            "17:49320217:A:G"
+          ],
+          "n_alternate": 6,
+          "q1_log_probability": -6.188777197610108,
+          "q1_probability": 0.0020523348194511487,
+          "quadrature_1024_vs_2048_log_difference": -1.6253665080512292e-13,
+          "empirical_count_given_lead_state": 4,
+          "empirical_probability_given_lead_state": 0.0074211502782931356
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "fe000010",
+          "alternate_variant_ids": [
+            "17:49299905:T:C",
+            "17:49301007:A:G",
+            "17:49301404:C:T",
+            "17:49301409:C:T",
+            "17:49313928:T:C",
+            "17:49319961:T:C",
+            "17:49320217:A:G",
+            "17:49366218:C:T"
+          ],
+          "n_alternate": 8,
+          "q1_log_probability": -6.346626265632683,
+          "q1_probability": 0.0017526501491053402,
+          "quadrature_1024_vs_2048_log_difference": -1.652011860642233e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "00fffff7",
+          "alternate_variant_ids": [
+            "17:49322238:C:G",
+            "17:49326191:T:C",
+            "17:49326378:G:C",
+            "17:49329551:A:G",
+            "17:49329709:A:C",
+            "17:49331312:G:A",
+            "17:49333741:A:G",
+            "17:49334625:A:G",
+            "17:49341336:T:C",
+            "17:49344007:G:C",
+            "17:49344008:C:T",
+            "17:49344147:G:A",
+            "17:49350149:T:C",
+            "17:49350837:G:A",
+            "17:49351211:A:C",
+            "17:49353734:T:C",
+            "17:49355215:T:C",
+            "17:49355517:C:T",
+            "17:49359450:A:T",
+            "17:49366218:C:T",
+            "17:49366751:T:C",
+            "17:49367059:T:G",
+            "17:49367080:T:C"
+          ],
+          "n_alternate": 23,
+          "q1_log_probability": -6.689869939385294,
+          "q1_probability": 0.0012434444855989404,
+          "quadrature_1024_vs_2048_log_difference": -1.2079226507921703e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.0018552875695732839
+        }
+      ],
+      "input_sha256": "ebb6eeca22690f90e250dea4230df1e7e80abd188e79b1dc9edea8f16640154e",
+      "coefficient_sha256": "4e49bbbb1c5664a6884e5eec83354551a070a478cf7153841e9239098c49adc1"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "17_5066645_C_T",
+      "n_haplotypes": 1006,
+      "n_variants": 23,
+      "n_haplotypes_with_conditioning_state": 674,
+      "conditioning_state_empirical_probability": 0.6699801192842942,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 3947325461,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 7397,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 3.0421227020448908e-37,
+        "screening_cutoff_count": 17,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 2.0849590362587986e-18,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 22855,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "74c21f",
+          "alternate_variant_ids": [
+            "17:5057249:T:A",
+            "17:5057947:A:G",
+            "17:5057976:T:G",
+            "17:5058064:G:A",
+            "17:5060385:A:T",
+            "17:5061674:G:C",
+            "17:5061678:C:A",
+            "17:5062294:T:A",
+            "17:5063659:G:A",
+            "17:5063763:T:G",
+            "17:5064429:C:A",
+            "17:5064512:A:T"
+          ],
+          "n_alternate": 12,
+          "q1_log_probability": -0.14937382665696436,
+          "q1_probability": 0.8612470975900689,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 614,
+          "empirical_probability_given_lead_state": 0.9109792284866469
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "74c21d",
+          "alternate_variant_ids": [
+            "17:5057249:T:A",
+            "17:5057947:A:G",
+            "17:5057976:T:G",
+            "17:5058064:G:A",
+            "17:5060385:A:T",
+            "17:5061674:G:C",
+            "17:5061678:C:A",
+            "17:5062294:T:A",
+            "17:5063763:T:G",
+            "17:5064429:C:A",
+            "17:5064512:A:T"
+          ],
+          "n_alternate": 11,
+          "q1_log_probability": -3.980774989314655,
+          "q1_probability": 0.018671163776835555,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 25,
+          "empirical_probability_given_lead_state": 0.037091988130563795
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "74421f",
+          "alternate_variant_ids": [
+            "17:5057249:T:A",
+            "17:5057947:A:G",
+            "17:5057976:T:G",
+            "17:5058064:G:A",
+            "17:5060385:A:T",
+            "17:5061674:G:C",
+            "17:5062294:T:A",
+            "17:5063659:G:A",
+            "17:5063763:T:G",
+            "17:5064429:C:A",
+            "17:5064512:A:T"
+          ],
+          "n_alternate": 11,
+          "q1_log_probability": -5.555598366845913,
+          "q1_probability": 0.0038657546379859105,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 4,
+          "empirical_probability_given_lead_state": 0.005934718100890208
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "76c21f",
+          "alternate_variant_ids": [
+            "17:5055547:T:G",
+            "17:5057249:T:A",
+            "17:5057947:A:G",
+            "17:5057976:T:G",
+            "17:5058064:G:A",
+            "17:5060385:A:T",
+            "17:5061674:G:C",
+            "17:5061678:C:A",
+            "17:5062294:T:A",
+            "17:5063659:G:A",
+            "17:5063763:T:G",
+            "17:5064429:C:A",
+            "17:5064512:A:T"
+          ],
+          "n_alternate": 13,
+          "q1_log_probability": -6.266258226677162,
+          "q1_probability": 0.0018993221366014044,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 3,
+          "empirical_probability_given_lead_state": 0.004451038575667656
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "74821f",
+          "alternate_variant_ids": [
+            "17:5057249:T:A",
+            "17:5057947:A:G",
+            "17:5057976:T:G",
+            "17:5058064:G:A",
+            "17:5060385:A:T",
+            "17:5061678:C:A",
+            "17:5062294:T:A",
+            "17:5063659:G:A",
+            "17:5063763:T:G",
+            "17:5064429:C:A",
+            "17:5064512:A:T"
+          ],
+          "n_alternate": 11,
+          "q1_log_probability": -6.29563916644944,
+          "q1_probability": 0.0018443300823018601,
+          "quadrature_1024_vs_2048_log_difference": -1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "74421d",
+          "alternate_variant_ids": [
+            "17:5057249:T:A",
+            "17:5057947:A:G",
+            "17:5057976:T:G",
+            "17:5058064:G:A",
+            "17:5060385:A:T",
+            "17:5061674:G:C",
+            "17:5062294:T:A",
+            "17:5063763:T:G",
+            "17:5064429:C:A",
+            "17:5064512:A:T"
+          ],
+          "n_alternate": 10,
+          "q1_log_probability": -6.6611893047418755,
+          "q1_probability": 0.001279623602627823,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "74c21e",
+          "alternate_variant_ids": [
+            "17:5057249:T:A",
+            "17:5057947:A:G",
+            "17:5057976:T:G",
+            "17:5058064:G:A",
+            "17:5060385:A:T",
+            "17:5061674:G:C",
+            "17:5061678:C:A",
+            "17:5063659:G:A",
+            "17:5063763:T:G",
+            "17:5064429:C:A",
+            "17:5064512:A:T"
+          ],
+          "n_alternate": 11,
+          "q1_log_probability": -6.871311331000342,
+          "q1_probability": 0.0010371161699340606,
+          "quadrature_1024_vs_2048_log_difference": -1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "74c21b",
+          "alternate_variant_ids": [
+            "17:5057249:T:A",
+            "17:5057947:A:G",
+            "17:5057976:T:G",
+            "17:5058064:G:A",
+            "17:5060385:A:T",
+            "17:5061674:G:C",
+            "17:5061678:C:A",
+            "17:5062294:T:A",
+            "17:5063659:G:A",
+            "17:5064429:C:A",
+            "17:5064512:A:T"
+          ],
+          "n_alternate": 11,
+          "q1_log_probability": -6.871311331000342,
+          "q1_probability": 0.0010371161699340606,
+          "quadrature_1024_vs_2048_log_difference": -1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.001483679525222552
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "74c23f",
+          "alternate_variant_ids": [
+            "17:5057249:T:A",
+            "17:5057947:A:G",
+            "17:5057976:T:G",
+            "17:5058064:G:A",
+            "17:5060385:A:T",
+            "17:5061674:G:C",
+            "17:5061678:C:A",
+            "17:5062294:T:A",
+            "17:5063659:G:A",
+            "17:5063763:T:G",
+            "17:5064429:C:A",
+            "17:5064512:A:T",
+            "17:5064847:A:T"
+          ],
+          "n_alternate": 13,
+          "q1_log_probability": -6.9192749240035605,
+          "q1_probability": 0.00098854645204093,
+          "quadrature_1024_vs_2048_log_difference": -1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "74c20f",
+          "alternate_variant_ids": [
+            "17:5057249:T:A",
+            "17:5057947:A:G",
+            "17:5057976:T:G",
+            "17:5058064:G:A",
+            "17:5060385:A:T",
+            "17:5061674:G:C",
+            "17:5061678:C:A",
+            "17:5062294:T:A",
+            "17:5063659:G:A",
+            "17:5063763:T:G",
+            "17:5064429:C:A"
+          ],
+          "n_alternate": 11,
+          "q1_log_probability": -7.001140742050539,
+          "q1_probability": 0.0009108423365382866,
+          "quadrature_1024_vs_2048_log_difference": -1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "02d2cf474d05334f458de9175b9b0841a1edaf2132bcbdf50a4d3971b10f1000",
+      "coefficient_sha256": "5281b76c19c83ed5b5c8f57ad5b28e3947e5b9056dbfeb756d6b52026c8117ad"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "17_58331728_G_C",
+      "n_haplotypes": 1006,
+      "n_variants": 3,
+      "n_haplotypes_with_conditioning_state": 537,
+      "conditioning_state_empirical_probability": 0.5337972166998012,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 4,
+        "reason_fewer_than_requested": "fewer than 10 possible haplotypes after fixing the lead to ALT",
+        "seed": 3080343379,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 4,
+        "candidate_pool_size": 4,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 0.0,
+        "screening_cutoff_count": 0,
+        "screen_was_truncated": false,
+        "screening_union_bound_at_tenth_probability": 0.0,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 1000,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "00",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.06692602962692606,
+          "q1_probability": 0.9352643806332941,
+          "quadrature_1024_vs_2048_log_difference": -1.8696155734687636e-13,
+          "empirical_count_given_lead_state": 530,
+          "empirical_probability_given_lead_state": 0.9869646182495344
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "02",
+          "alternate_variant_ids": [
+            "17:58326988:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -3.671861202105683,
+          "q1_probability": 0.02542909718598708,
+          "quadrature_1024_vs_2048_log_difference": -1.8918200339612667e-13,
+          "empirical_count_given_lead_state": 6,
+          "empirical_probability_given_lead_state": 0.0111731843575419
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "06",
+          "alternate_variant_ids": [
+            "17:58326988:A:G",
+            "17:58332680:A:G"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -3.8416178476475524,
+          "q1_probability": 0.02145885608656233,
+          "quadrature_1024_vs_2048_log_difference": -1.8918200339612667e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.00186219739292365
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "04",
+          "alternate_variant_ids": [
+            "17:58332680:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.0258825303237495,
+          "q1_probability": 0.01784766609431797,
+          "quadrature_1024_vs_2048_log_difference": -1.900701818158268e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "ca8f54d130ae6d471c3de96e9591cfcc64c15d23927669287811d49088bad24d",
+      "coefficient_sha256": "9e159656a178622b103560b31e17abd76bdfcc546e85fd9e9d6f38ac28342fcb"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "17_63468418_C_T",
+      "n_haplotypes": 1006,
+      "n_variants": 10,
+      "n_haplotypes_with_conditioning_state": 366,
+      "conditioning_state_empirical_probability": 0.36381709741550694,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 3706799218,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 512,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 1.1545003477644348e-168,
+        "screening_cutoff_count": 53,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 5.02778866857809e-101,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 4935,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "0000",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.14963308376293316,
+          "q1_probability": 0.8610238421015601,
+          "quadrature_1024_vs_2048_log_difference": -1.8696155734687636e-13,
+          "empirical_count_given_lead_state": 355,
+          "empirical_probability_given_lead_state": 0.9699453551912568
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "0002",
+          "alternate_variant_ids": [
+            "17:63482264:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.998852298463986,
+          "q1_probability": 0.006745684590579376,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 2,
+          "empirical_probability_given_lead_state": 0.00546448087431694
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "8000",
+          "alternate_variant_ids": [
+            "17:63476980:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.105284121215189,
+          "q1_probability": 0.006064615584407866,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "0200",
+          "alternate_variant_ids": [
+            "17:63470201:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.212692479483581,
+          "q1_probability": 0.005446988022588627,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "0800",
+          "alternate_variant_ids": [
+            "17:63471557:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.212692479483581,
+          "q1_probability": 0.005446988022588627,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 5,
+          "empirical_probability_given_lead_state": 0.01366120218579235
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "4000",
+          "alternate_variant_ids": [
+            "17:63476833:T:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.321107356925837,
+          "q1_probability": 0.0048873386992520276,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "0001",
+          "alternate_variant_ids": [
+            "17:63478937:C:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.321107356925837,
+          "q1_probability": 0.0048873386992520276,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "2000",
+          "alternate_variant_ids": [
+            "17:63473368:C:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.485680572667519,
+          "q1_probability": 0.004145712660237615,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.00273224043715847
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "1000",
+          "alternate_variant_ids": [
+            "17:63471587:C:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.485680572667519,
+          "q1_probability": 0.004145712660237615,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "0400",
+          "alternate_variant_ids": [
+            "17:63471115:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.541072726584155,
+          "q1_probability": 0.003922317006985463,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "805850855b4b166cb3c6b275137eef930ca2381db72e5be46939b183f11e2aa8",
+      "coefficient_sha256": "766df2a730bb1ca2a3ee9daa3073693d6502f59cd50d20c94cf2868fc6caf9fe"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "19_44946027_T_G",
+      "n_haplotypes": 1006,
+      "n_variants": 62,
+      "n_haplotypes_with_conditioning_state": 511,
+      "conditioning_state_empirical_probability": 0.5079522862823062,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 1456550015,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 15800,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 1.7776114359559415e-232,
+        "screening_cutoff_count": 55,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 8.185556929021726e-156,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 3534,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "000000000000003c",
+          "alternate_variant_ids": [
+            "19:44967087:C:T",
+            "19:44972443:G:T",
+            "19:44979627:T:C",
+            "19:44989301:G:A"
+          ],
+          "n_alternate": 4,
+          "q1_log_probability": -0.370322289303625,
+          "q1_probability": 0.690511750220514,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 463,
+          "empirical_probability_given_lead_state": 0.9060665362035225
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "000100000000003c",
+          "alternate_variant_ids": [
+            "19:44944779:T:C",
+            "19:44967087:C:T",
+            "19:44972443:G:T",
+            "19:44979627:T:C",
+            "19:44989301:G:A"
+          ],
+          "n_alternate": 5,
+          "q1_log_probability": -4.420688572101699,
+          "q1_probability": 0.012025948700356994,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 10,
+          "empirical_probability_given_lead_state": 0.019569471624266144
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "020000000000003c",
+          "alternate_variant_ids": [
+            "19:44937504:A:T",
+            "19:44967087:C:T",
+            "19:44972443:G:T",
+            "19:44979627:T:C",
+            "19:44989301:G:A"
+          ],
+          "n_alternate": 5,
+          "q1_log_probability": -4.7146191818264755,
+          "q1_probability": 0.008963278796482984,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 2,
+          "empirical_probability_given_lead_state": 0.003913894324853229
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "200000000000003c",
+          "alternate_variant_ids": [
+            "19:44939705:G:A",
+            "19:44967087:C:T",
+            "19:44972443:G:T",
+            "19:44979627:T:C",
+            "19:44989301:G:A"
+          ],
+          "n_alternate": 5,
+          "q1_log_probability": -4.945322451892676,
+          "q1_probability": 0.007116619526613028,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "040000000000003c",
+          "alternate_variant_ids": [
+            "19:44938351:T:C",
+            "19:44967087:C:T",
+            "19:44972443:G:T",
+            "19:44979627:T:C",
+            "19:44989301:G:A"
+          ],
+          "n_alternate": 5,
+          "q1_log_probability": -4.96679716935077,
+          "q1_probability": 0.0069654214119612866,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "080000000000003c",
+          "alternate_variant_ids": [
+            "19:44938650:G:C",
+            "19:44967087:C:T",
+            "19:44972443:G:T",
+            "19:44979627:T:C",
+            "19:44989301:G:A"
+          ],
+          "n_alternate": 5,
+          "q1_log_probability": -4.96679716935077,
+          "q1_probability": 0.0069654214119612866,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "400000000000003c",
+          "alternate_variant_ids": [
+            "19:44941485:A:G",
+            "19:44967087:C:T",
+            "19:44972443:G:T",
+            "19:44979627:T:C",
+            "19:44989301:G:A"
+          ],
+          "n_alternate": 5,
+          "q1_log_probability": -4.988979040264238,
+          "q1_probability": 0.0068126163498317075,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "100000000000003c",
+          "alternate_variant_ids": [
+            "19:44939271:C:G",
+            "19:44967087:C:T",
+            "19:44972443:G:T",
+            "19:44979627:T:C",
+            "19:44989301:G:A"
+          ],
+          "n_alternate": 5,
+          "q1_log_probability": -5.027130142646985,
+          "q1_probability": 0.006557602977009876,
+          "quadrature_1024_vs_2048_log_difference": -1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "0000000000000034",
+          "alternate_variant_ids": [
+            "19:44967087:C:T",
+            "19:44979627:T:C",
+            "19:44989301:G:A"
+          ],
+          "n_alternate": 3,
+          "q1_log_probability": -5.04293709640241,
+          "q1_probability": 0.00645476219108531,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 10,
+          "empirical_probability_given_lead_state": 0.019569471624266144
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "800000000000003c",
+          "alternate_variant_ids": [
+            "19:44943904:T:C",
+            "19:44967087:C:T",
+            "19:44972443:G:T",
+            "19:44979627:T:C",
+            "19:44989301:G:A"
+          ],
+          "n_alternate": 5,
+          "q1_log_probability": -5.223492006193305,
+          "q1_probability": 0.005388479630075608,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "7aa34338544b9da7c723e163e53a856fa0fedf5d7981c00b4022f5b782927aba",
+      "coefficient_sha256": "d6d871e46ebd93a07bca16226b8f625a99cce13cfd084c25c64c404628e9460e"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "19_48710247_G_A",
+      "n_haplotypes": 1006,
+      "n_variants": 36,
+      "n_haplotypes_with_conditioning_state": 534,
+      "conditioning_state_empirical_probability": 0.5308151093439364,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 4285046901,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 12859,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 5.93124745605404e-66,
+        "screening_cutoff_count": 23,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 7.473751945204242e-38,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 12943,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "0000000000",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.22306056388376427,
+          "q1_probability": 0.800066392699198,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 518,
+          "empirical_probability_given_lead_state": 0.9700374531835206
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "0000000008",
+          "alternate_variant_ids": [
+            "19:48714803:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.459725470522234,
+          "q1_probability": 0.011565537932770502,
+          "quadrature_1024_vs_2048_log_difference": -1.8918200339612667e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "0000000004",
+          "alternate_variant_ids": [
+            "19:48711017:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.243233298723511,
+          "q1_probability": 0.005283147197400475,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 2,
+          "empirical_probability_given_lead_state": 0.003745318352059925
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "0000008000",
+          "alternate_variant_ids": [
+            "19:48710027:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.720540966004115,
+          "q1_probability": 0.003277937170049772,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "0000000002",
+          "alternate_variant_ids": [
+            "19:48710576:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.720540966004115,
+          "q1_probability": 0.003277937170049772,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "0000000001",
+          "alternate_variant_ids": [
+            "19:48710274:A:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.720540966004115,
+          "q1_probability": 0.003277937170049772,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "0000004000",
+          "alternate_variant_ids": [
+            "19:48708712:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.7421154479514405,
+          "q1_probability": 0.003207974788511851,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "1000000000",
+          "alternate_variant_ids": [
+            "19:48703160:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.352554954775203,
+          "q1_probability": 0.0017422899726745706,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.0018726591760299626
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "0800000000",
+          "alternate_variant_ids": [
+            "19:48702915:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.458915932005054,
+          "q1_probability": 0.0015664929751514158,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "0200000000",
+          "alternate_variant_ids": [
+            "19:48702851:C:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.458915932005054,
+          "q1_probability": 0.0015664929751514158,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "6503a69bd403ea90f21fba3006ca18263f1d4adc7e81fc736481b12ed2f33577",
+      "coefficient_sha256": "8b05c0ff2c536ca15d69567bce61b257c5158851f37fb8f8f3baaa4b019081be"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "19_51234736_T_G",
+      "n_haplotypes": 1006,
+      "n_variants": 6,
+      "n_haplotypes_with_conditioning_state": 666,
+      "conditioning_state_empirical_probability": 0.6620278330019881,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 4025189113,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 32,
+        "candidate_pool_size": 32,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 1.2733501639460437e-62,
+        "screening_cutoff_count": 0,
+        "screen_was_truncated": false,
+        "screening_union_bound_at_tenth_probability": 1.2733501639460437e-62,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 13638,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "00",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.055307916774447574,
+          "q1_probability": 0.9461937541644836,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 666,
+          "empirical_probability_given_lead_state": 1.0
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "20",
+          "alternate_variant_ids": [
+            "19:51233866:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.620442853014724,
+          "q1_probability": 0.009848433686764723,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "08",
+          "alternate_variant_ids": [
+            "19:51227920:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.670640123766253,
+          "q1_probability": 0.00936627203431169,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "28",
+          "alternate_variant_ids": [
+            "19:51227920:G:A",
+            "19:51233866:A:G"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -5.511755354786481,
+          "q1_probability": 0.004039011259190175,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "10",
+          "alternate_variant_ids": [
+            "19:51233128:G:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.794636315794941,
+          "q1_probability": 0.0030438372209360227,
+          "quadrature_1024_vs_2048_log_difference": -1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "04",
+          "alternate_variant_ids": [
+            "19:51225221:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.026590146924459,
+          "q1_probability": 0.002413710360026352,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "02",
+          "alternate_variant_ids": [
+            "19:51224706:C:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.026590146924459,
+          "q1_probability": 0.002413710360026352,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "3e",
+          "alternate_variant_ids": [
+            "19:51224706:C:A",
+            "19:51225221:C:T",
+            "19:51227920:G:A",
+            "19:51233128:G:C",
+            "19:51233866:A:G"
+          ],
+          "n_alternate": 5,
+          "q1_log_probability": -6.137172095797888,
+          "q1_probability": 0.002161026160488524,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "38",
+          "alternate_variant_ids": [
+            "19:51227920:G:A",
+            "19:51233128:G:C",
+            "19:51233866:A:G"
+          ],
+          "n_alternate": 3,
+          "q1_log_probability": -6.416112251140662,
+          "q1_probability": 0.001635000365409883,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "30",
+          "alternate_variant_ids": [
+            "19:51233128:G:C",
+            "19:51233866:A:G"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -6.508795152022001,
+          "q1_probability": 0.0014902741956603115,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "cf00561217045ca7708cd82901d480105808c20c7fb84f5e5ea1beade16775ec",
+      "coefficient_sha256": "deca77f67ea8f8242075704b57cad454e5429bd4e9f5a59626e88f2ed6956edd"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "19_54313903_C_A",
+      "n_haplotypes": 1006,
+      "n_variants": 10,
+      "n_haplotypes_with_conditioning_state": 506,
+      "conditioning_state_empirical_probability": 0.5029821073558648,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 1626264176,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 512,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 2.7883508116533773e-112,
+        "screening_cutoff_count": 36,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 8.577264068986792e-67,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 7518,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "0000",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.1274986200930983,
+          "q1_probability": 0.8802946305580193,
+          "quadrature_1024_vs_2048_log_difference": -1.8696155734687636e-13,
+          "empirical_count_given_lead_state": 483,
+          "empirical_probability_given_lead_state": 0.9545454545454546
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "0002",
+          "alternate_variant_ids": [
+            "19:54317309:C:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.229617815845838,
+          "q1_probability": 0.014557953304419797,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 8,
+          "empirical_probability_given_lead_state": 0.015810276679841896
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "0001",
+          "alternate_variant_ids": [
+            "19:54315389:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.269043144475516,
+          "q1_probability": 0.005148534620648369,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "2000",
+          "alternate_variant_ids": [
+            "19:54309396:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.420191607408578,
+          "q1_probability": 0.004426298454997538,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "8000",
+          "alternate_variant_ids": [
+            "19:54310548:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.471090586301184,
+          "q1_probability": 0.004206641949358705,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "4000",
+          "alternate_variant_ids": [
+            "19:54310177:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.471090586301184,
+          "q1_probability": 0.004206641949358705,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "1000",
+          "alternate_variant_ids": [
+            "19:54305226:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.888102674194791,
+          "q1_probability": 0.002772231536699498,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "fe03",
+          "alternate_variant_ids": [
+            "19:54302959:T:C",
+            "19:54304006:C:T",
+            "19:54304091:C:T",
+            "19:54305226:T:C",
+            "19:54309396:C:T",
+            "19:54310177:G:A",
+            "19:54310548:G:A",
+            "19:54315389:C:T",
+            "19:54317309:C:G"
+          ],
+          "n_alternate": 9,
+          "q1_log_probability": -5.922098133278384,
+          "q1_probability": 0.0026795721753168087,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "0400",
+          "alternate_variant_ids": [
+            "19:54304006:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.941510903833262,
+          "q1_probability": 0.0026280559100503994,
+          "quadrature_1024_vs_2048_log_difference": -1.900701818158268e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "0800",
+          "alternate_variant_ids": [
+            "19:54304091:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.941510903833262,
+          "q1_probability": 0.0026280559100503994,
+          "quadrature_1024_vs_2048_log_difference": -1.900701818158268e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "d494e8fda6dee5c8795e0b3ba0030bb2d55f71b10750cb82c05aa4ef1f502dc4",
+      "coefficient_sha256": "b17e92b44be630a7134d611525f68b9ecdc78b5218ad2ac0b7c0bac2fb3586d6"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "1_207577223_T_C",
+      "n_haplotypes": 1006,
+      "n_variants": 24,
+      "n_haplotypes_with_conditioning_state": 173,
+      "conditioning_state_empirical_probability": 0.17196819085487078,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 1125751667,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 16026,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 1.5735156046270639e-99,
+        "screening_cutoff_count": 36,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 7.518820032264685e-56,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 8510,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "000000",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.3572669585979029,
+          "q1_probability": 0.6995857123828518,
+          "quadrature_1024_vs_2048_log_difference": -1.8696155734687636e-13,
+          "empirical_count_given_lead_state": 162,
+          "empirical_probability_given_lead_state": 0.9364161849710982
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "040000",
+          "alternate_variant_ids": [
+            "1:207510847:T:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.50420949806642,
+          "q1_probability": 0.011062331525842605,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "200000",
+          "alternate_variant_ids": [
+            "1:207518704:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.50420949806642,
+          "q1_probability": 0.011062331525842605,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "100000",
+          "alternate_variant_ids": [
+            "1:207512620:A:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.50420949806642,
+          "q1_probability": 0.011062331525842605,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "020000",
+          "alternate_variant_ids": [
+            "1:207505962:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.77458092411284,
+          "q1_probability": 0.008441621026097499,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "080000",
+          "alternate_variant_ids": [
+            "1:207512441:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.962549014836016,
+          "q1_probability": 0.006995074539317738,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "400000",
+          "alternate_variant_ids": [
+            "1:207524699:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.4447501312883055,
+          "q1_probability": 0.0043189190355551335,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "008000",
+          "alternate_variant_ids": [
+            "1:207624893:C:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.6419017035703,
+          "q1_probability": 0.0035461183240504193,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "000020",
+          "alternate_variant_ids": [
+            "1:207629207:A:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.923521302776502,
+          "q1_probability": 0.0026757614022600807,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "800000",
+          "alternate_variant_ids": [
+            "1:207564732:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.05947751585229,
+          "q1_probability": 0.00233562089367645,
+          "quadrature_1024_vs_2048_log_difference": -1.900701818158268e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "58744578758310244991488c32263ae8e98db1014cb39f6d9dda92337c54d378",
+      "coefficient_sha256": "2073b1038aad20f38a42fcb7c01c618baa403c494bb71d9cf72441c43ddb69bc"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "20_56420643_C_T",
+      "n_haplotypes": 1006,
+      "n_variants": 19,
+      "n_haplotypes_with_conditioning_state": 920,
+      "conditioning_state_empirical_probability": 0.9145129224652088,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 585758437,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 1971,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 8.255978619211885e-18,
+        "screening_cutoff_count": 6,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 1.3999719836020335e-10,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 45701,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "000000",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.03713634564130362,
+          "q1_probability": 0.9635447512653974,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 907,
+          "empirical_probability_given_lead_state": 0.9858695652173913
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "020000",
+          "alternate_variant_ids": [
+            "20:56408019:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.056476207053536,
+          "q1_probability": 0.0023426413432137473,
+          "quadrature_1024_vs_2048_log_difference": -1.8918200339612667e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "000100",
+          "alternate_variant_ids": [
+            "20:56423488:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.50987942624333,
+          "q1_probability": 0.001488659205471582,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "400000",
+          "alternate_variant_ids": [
+            "20:56414777:T:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -7.164914026172242,
+          "q1_probability": 0.0007732454534787807,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "100000",
+          "alternate_variant_ids": [
+            "20:56412160:G:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -7.164914026172242,
+          "q1_probability": 0.0007732454534787807,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "200000",
+          "alternate_variant_ids": [
+            "20:56413016:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -7.301272179111491,
+          "q1_probability": 0.0006746799153026815,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "040000",
+          "alternate_variant_ids": [
+            "20:56409084:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -7.440744551695613,
+          "q1_probability": 0.0005868480960988539,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "080000",
+          "alternate_variant_ids": [
+            "20:56409712:G:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -7.440744551695613,
+          "q1_probability": 0.0005868480960988539,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "000002",
+          "alternate_variant_ids": [
+            "20:56443204:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -7.662811782195418,
+          "q1_probability": 0.0004699840583707963,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "000004",
+          "alternate_variant_ids": [
+            "20:56443413:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -7.662811782195418,
+          "q1_probability": 0.0004699840583707963,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "18ed5fa1cc3511bc36b27cd4ed0884794610204946eec6fc5e16a794a17eccda",
+      "coefficient_sha256": "10288b1928ed74b06733f591e3df451cb7ba0ea804e866683c79fb624a6b4eca"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "21_26148613_G_T",
+      "n_haplotypes": 1006,
+      "n_variants": 23,
+      "n_haplotypes_with_conditioning_state": 554,
+      "conditioning_state_empirical_probability": 0.5506958250497018,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 1034944837,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 12405,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 4.361863972222533e-58,
+        "screening_cutoff_count": 23,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 3.4739248850848398e-31,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 14710,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "fe4100",
+          "alternate_variant_ids": [
+            "21:26105087:A:G",
+            "21:26105697:G:T",
+            "21:26109027:A:C",
+            "21:26121885:C:T",
+            "21:26123865:T:A",
+            "21:26128343:T:G",
+            "21:26128825:T:C",
+            "21:26130406:C:A",
+            "21:26142777:A:C"
+          ],
+          "n_alternate": 9,
+          "q1_log_probability": -0.2456989729941298,
+          "q1_probability": 0.7821576400630492,
+          "quadrature_1024_vs_2048_log_difference": -1.8696155734687636e-13,
+          "empirical_count_given_lead_state": 495,
+          "empirical_probability_given_lead_state": 0.8935018050541517
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "fc4100",
+          "alternate_variant_ids": [
+            "21:26105697:G:T",
+            "21:26109027:A:C",
+            "21:26121885:C:T",
+            "21:26123865:T:A",
+            "21:26128343:T:G",
+            "21:26128825:T:C",
+            "21:26130406:C:A",
+            "21:26142777:A:C"
+          ],
+          "n_alternate": 8,
+          "q1_log_probability": -4.734395880390687,
+          "q1_probability": 0.008787756084264202,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 2,
+          "empirical_probability_given_lead_state": 0.0036101083032490976
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "fe4110",
+          "alternate_variant_ids": [
+            "21:26105087:A:G",
+            "21:26105697:G:T",
+            "21:26109027:A:C",
+            "21:26121885:C:T",
+            "21:26123865:T:A",
+            "21:26128343:T:G",
+            "21:26128825:T:C",
+            "21:26130406:C:A",
+            "21:26142777:A:C",
+            "21:26151670:G:C"
+          ],
+          "n_alternate": 10,
+          "q1_log_probability": -4.948326592649951,
+          "q1_probability": 0.007095272280959132,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "fa4100",
+          "alternate_variant_ids": [
+            "21:26105087:A:G",
+            "21:26109027:A:C",
+            "21:26121885:C:T",
+            "21:26123865:T:A",
+            "21:26128343:T:G",
+            "21:26128825:T:C",
+            "21:26130406:C:A",
+            "21:26142777:A:C"
+          ],
+          "n_alternate": 8,
+          "q1_log_probability": -5.275169721659329,
+          "q1_probability": 0.005117088153876083,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "f64100",
+          "alternate_variant_ids": [
+            "21:26105087:A:G",
+            "21:26105697:G:T",
+            "21:26121885:C:T",
+            "21:26123865:T:A",
+            "21:26128343:T:G",
+            "21:26128825:T:C",
+            "21:26130406:C:A",
+            "21:26142777:A:C"
+          ],
+          "n_alternate": 8,
+          "q1_log_probability": -5.429426822473984,
+          "q1_probability": 0.004385608814809479,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "de4100",
+          "alternate_variant_ids": [
+            "21:26105087:A:G",
+            "21:26105697:G:T",
+            "21:26109027:A:C",
+            "21:26121885:C:T",
+            "21:26128343:T:G",
+            "21:26128825:T:C",
+            "21:26130406:C:A",
+            "21:26142777:A:C"
+          ],
+          "n_alternate": 8,
+          "q1_log_probability": -5.5329057356796865,
+          "q1_probability": 0.003954481699902013,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "fe4140",
+          "alternate_variant_ids": [
+            "21:26105087:A:G",
+            "21:26105697:G:T",
+            "21:26109027:A:C",
+            "21:26121885:C:T",
+            "21:26123865:T:A",
+            "21:26128343:T:G",
+            "21:26128825:T:C",
+            "21:26130406:C:A",
+            "21:26142777:A:C",
+            "21:26160704:C:G"
+          ],
+          "n_alternate": 10,
+          "q1_log_probability": -5.53421481232101,
+          "q1_probability": 0.003949308367163441,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.0018050541516245488
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "ee4100",
+          "alternate_variant_ids": [
+            "21:26105087:A:G",
+            "21:26105697:G:T",
+            "21:26109027:A:C",
+            "21:26123865:T:A",
+            "21:26128343:T:G",
+            "21:26128825:T:C",
+            "21:26130406:C:A",
+            "21:26142777:A:C"
+          ],
+          "n_alternate": 8,
+          "q1_log_probability": -5.549676024861957,
+          "q1_probability": 0.0038887168870087984,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "fe4120",
+          "alternate_variant_ids": [
+            "21:26105087:A:G",
+            "21:26105697:G:T",
+            "21:26109027:A:C",
+            "21:26121885:C:T",
+            "21:26123865:T:A",
+            "21:26128343:T:G",
+            "21:26128825:T:C",
+            "21:26130406:C:A",
+            "21:26142777:A:C",
+            "21:26158949:T:C"
+          ],
+          "n_alternate": 10,
+          "q1_log_probability": -6.5809153468575134,
+          "q1_probability": 0.001386579512579456,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.0018050541516245488
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "fe4300",
+          "alternate_variant_ids": [
+            "21:26105087:A:G",
+            "21:26105697:G:T",
+            "21:26109027:A:C",
+            "21:26121885:C:T",
+            "21:26123865:T:A",
+            "21:26128343:T:G",
+            "21:26128825:T:C",
+            "21:26130406:C:A",
+            "21:26135742:T:C",
+            "21:26142777:A:C"
+          ],
+          "n_alternate": 10,
+          "q1_log_probability": -6.5809153468575134,
+          "q1_probability": 0.001386579512579456,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "b888533df3ac064642b2f14df377ae8892803490e4b3ddf32a2f5ff0fc1b7e72",
+      "coefficient_sha256": "50b0115e49b69f0ae8e34e3091d33fccb773887013e032af4e4e395e5d1a91f8"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "2_127133851_A_C",
+      "n_haplotypes": 1006,
+      "n_variants": 2,
+      "n_haplotypes_with_conditioning_state": 599,
+      "conditioning_state_empirical_probability": 0.595427435387674,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 2,
+        "reason_fewer_than_requested": "fewer than 10 possible haplotypes after fixing the lead to ALT",
+        "seed": 108716739,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 2,
+        "candidate_pool_size": 2,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 0.0,
+        "screening_cutoff_count": 0,
+        "screen_was_truncated": false,
+        "screening_union_bound_at_tenth_probability": 0.0,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 920,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "00",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.0195120920747599,
+          "q1_probability": 0.9806770366969265,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 598,
+          "empirical_probability_given_lead_state": 0.998330550918197
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "02",
+          "alternate_variant_ids": [
+            "2:127135234:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -3.946461081874663,
+          "q1_probability": 0.019322963303234953,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.001669449081803005
+        }
+      ],
+      "input_sha256": "0bb855c3ae94f86270624539c0e18a7d3a7bcb795768b4ac56cdd035c676d7b9",
+      "coefficient_sha256": "be8c1456cee1aaf777af67d3d20cbeda61f55920db7420a0993b105fc2eeaed2"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "2_233173931_A_C",
+      "n_haplotypes": 1006,
+      "n_variants": 35,
+      "n_haplotypes_with_conditioning_state": 570,
+      "conditioning_state_empirical_probability": 0.5666003976143141,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 307014918,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 14476,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 1.4603589508007276e-49,
+        "screening_cutoff_count": 13,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 2.4320734178815655e-32,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 17241,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "0000000000",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.2256078466716267,
+          "q1_probability": 0.798030990820598,
+          "quadrature_1024_vs_2048_log_difference": -1.8696155734687636e-13,
+          "empirical_count_given_lead_state": 526,
+          "empirical_probability_given_lead_state": 0.9228070175438596
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "0010000000",
+          "alternate_variant_ids": [
+            "2:233160866:A:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.646478133706834,
+          "q1_probability": 0.0035299268391434007,
+          "quadrature_1024_vs_2048_log_difference": -1.687538997430238e-13,
+          "empirical_count_given_lead_state": 6,
+          "empirical_probability_given_lead_state": 0.010526315789473684
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "feffffff07",
+          "alternate_variant_ids": [
+            "2:233152671:C:A",
+            "2:233157049:C:T",
+            "2:233159139:G:A",
+            "2:233159173:G:A",
+            "2:233159422:A:G",
+            "2:233159546:T:A",
+            "2:233159636:G:A",
+            "2:233159830:C:T",
+            "2:233160059:C:T",
+            "2:233160620:C:A",
+            "2:233160677:C:A",
+            "2:233160866:A:C",
+            "2:233161118:C:A",
+            "2:233161165:C:T",
+            "2:233161334:C:T",
+            "2:233161396:G:A",
+            "2:233161439:C:T",
+            "2:233161525:G:C",
+            "2:233161544:G:A",
+            "2:233161587:T:C",
+            "2:233162496:G:A",
+            "2:233162516:G:A",
+            "2:233162595:A:G",
+            "2:233162603:A:C",
+            "2:233165655:C:T",
+            "2:233166171:G:A",
+            "2:233166618:C:T",
+            "2:233167045:C:A",
+            "2:233168576:G:A",
+            "2:233168594:A:C",
+            "2:233169936:G:A",
+            "2:233171907:A:G",
+            "2:233172293:G:A",
+            "2:233173738:C:G"
+          ],
+          "n_alternate": 34,
+          "q1_log_probability": -5.827590027902199,
+          "q1_probability": 0.0029451662027501608,
+          "quadrature_1024_vs_2048_log_difference": -1.829647544582258e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "0000004000",
+          "alternate_variant_ids": [
+            "2:233168594:A:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.940015790124852,
+          "q1_probability": 0.002631988091264514,
+          "quadrature_1024_vs_2048_log_difference": -1.723066134218243e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "0000002000",
+          "alternate_variant_ids": [
+            "2:233168576:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.940015790124852,
+          "q1_probability": 0.002631988091264514,
+          "quadrature_1024_vs_2048_log_difference": -1.723066134218243e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "0200000000",
+          "alternate_variant_ids": [
+            "2:233152671:C:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.4686656669838865,
+          "q1_probability": 0.0015512942957409289,
+          "quadrature_1024_vs_2048_log_difference": -1.6342482922482304e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "0400000000",
+          "alternate_variant_ids": [
+            "2:233157049:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.4686656669838865,
+          "q1_probability": 0.0015512942957409289,
+          "quadrature_1024_vs_2048_log_difference": -1.6342482922482304e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "0000008000",
+          "alternate_variant_ids": [
+            "2:233169936:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.727063321290556,
+          "q1_probability": 0.0011980460735679342,
+          "quadrature_1024_vs_2048_log_difference": -1.652011860642233e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.0017543859649122807
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "1000000000",
+          "alternate_variant_ids": [
+            "2:233159173:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.732288198086859,
+          "q1_probability": 0.0011918027549257984,
+          "quadrature_1024_vs_2048_log_difference": -1.580957587066223e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "0800000000",
+          "alternate_variant_ids": [
+            "2:233159139:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.732288198086859,
+          "q1_probability": 0.0011918027549257984,
+          "quadrature_1024_vs_2048_log_difference": -1.580957587066223e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "8c1e72d716264d017258562ea0304c638b1bb98ce5647dc029e604d16021aa91",
+      "coefficient_sha256": "daed4fead733eaf5dae5f68226fae53993616e4f376011c833d6ec12a73d1285"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "5_157099320_A_G",
+      "n_haplotypes": 1006,
+      "n_variants": 22,
+      "n_haplotypes_with_conditioning_state": 230,
+      "conditioning_state_empirical_probability": 0.2286282306163022,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 1164863850,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 12128,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 2.3935549395343754e-110,
+        "screening_cutoff_count": 25,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 2.6298109951581983e-75,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 7654,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "000000",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.261094954630958,
+          "q1_probability": 0.7702077813470867,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 227,
+          "empirical_probability_given_lead_state": 0.9869565217391304
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "020000",
+          "alternate_variant_ids": [
+            "5:157082080:T:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.295782366906146,
+          "q1_probability": 0.013625907067243145,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "100000",
+          "alternate_variant_ids": [
+            "5:157098420:A:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.194457645811467,
+          "q1_probability": 0.00554722405949032,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "040000",
+          "alternate_variant_ids": [
+            "5:157088395:C:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.397972996714979,
+          "q1_probability": 0.00452574535202655,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "004000",
+          "alternate_variant_ids": [
+            "5:157113818:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.835463065630317,
+          "q1_probability": 0.002922069836702665,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "000010",
+          "alternate_variant_ids": [
+            "5:157119184:A:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.885566025871441,
+          "q1_probability": 0.00277927263980465,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "000020",
+          "alternate_variant_ids": [
+            "5:157119431:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.885566025871441,
+          "q1_probability": 0.00277927263980465,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "800000",
+          "alternate_variant_ids": [
+            "5:157099924:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.958532361871938,
+          "q1_probability": 0.002583701129079912,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "400000",
+          "alternate_variant_ids": [
+            "5:157099655:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.958532361871938,
+          "q1_probability": 0.002583701129079912,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "200000",
+          "alternate_variant_ids": [
+            "5:157099618:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.958532361871938,
+          "q1_probability": 0.002583701129079912,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "b5bbb8b961a35fa1a1c97ce636a4fe413f95694518d123040b6557b1fba3c56f",
+      "coefficient_sha256": "359e793caee35ff3db812c4b19874fbf8461bcfec8154c5e7cef44d404056c47"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "6_47584444_A_T",
+      "n_haplotypes": 1006,
+      "n_variants": 79,
+      "n_haplotypes_with_conditioning_state": 753,
+      "conditioning_state_empirical_probability": 0.7485089463220675,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 1475380061,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 10434,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 3.315102897698119e-32,
+        "screening_cutoff_count": 14,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 1.8519595728001528e-16,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 26314,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "00000000000000000000",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.1438857199727518,
+          "q1_probability": 0.8659867073890768,
+          "quadrature_1024_vs_2048_log_difference": -7.283063041541027e-14,
+          "empirical_count_given_lead_state": 738,
+          "empirical_probability_given_lead_state": 0.9800796812749004
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "00000010000000000000",
+          "alternate_variant_ids": [
+            "6:47513892:T:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.041370196779778,
+          "q1_probability": 0.002378297943857902,
+          "quadrature_1024_vs_2048_log_difference": -7.146283564907208e-12,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "04000000000000000000",
+          "alternate_variant_ids": [
+            "6:47459875:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.486542946134568,
+          "q1_probability": 0.0015238077985095717,
+          "quadrature_1024_vs_2048_log_difference": -1.8034462812011043e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "10000000000000000000",
+          "alternate_variant_ids": [
+            "6:47463548:A:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.486542946134568,
+          "q1_probability": 0.0015238077985095717,
+          "quadrature_1024_vs_2048_log_difference": -1.8034462812011043e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "02000000000000000000",
+          "alternate_variant_ids": [
+            "6:47459545:T:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.486542946134568,
+          "q1_probability": 0.0015238077985095717,
+          "quadrature_1024_vs_2048_log_difference": -1.8034462812011043e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "20000000000000000000",
+          "alternate_variant_ids": [
+            "6:47466015:A:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.535544871736421,
+          "q1_probability": 0.0014509382370961883,
+          "quadrature_1024_vs_2048_log_difference": -1.8475887486602005e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "08000000000000000000",
+          "alternate_variant_ids": [
+            "6:47462031:C:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.535544871736421,
+          "q1_probability": 0.0014509382370961883,
+          "quadrature_1024_vs_2048_log_difference": -1.8475887486602005e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "00000000000000000002",
+          "alternate_variant_ids": [
+            "6:47615928:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.870907450677158,
+          "q1_probability": 0.001037535125346182,
+          "quadrature_1024_vs_2048_log_difference": -1.9545254303920956e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "00000000000000100000",
+          "alternate_variant_ids": [
+            "6:47585666:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -7.135661456503073,
+          "q1_probability": 0.0007961989576912684,
+          "quadrature_1024_vs_2048_log_difference": -2.630962114835711e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "00000000000000200000",
+          "alternate_variant_ids": [
+            "6:47586441:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -7.135661456503073,
+          "q1_probability": 0.0007961989576912684,
+          "quadrature_1024_vs_2048_log_difference": -2.630962114835711e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "dc6a9c7c4dc5ab3e43d5b4551a3522a7b5f82fc47a3ab564bfe8310aace14e9b",
+      "coefficient_sha256": "47cfa150f58b1a0c5c3065b9aa4b9306baa08f70d4decf0e40deb34e1b622894"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "7_100334426_C_T",
+      "n_haplotypes": 1006,
+      "n_variants": 8,
+      "n_haplotypes_with_conditioning_state": 330,
+      "conditioning_state_empirical_probability": 0.32803180914512925,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 1211471285,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 128,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 8.510437913796668e-158,
+        "screening_cutoff_count": 123,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 2.4283906947487426e-47,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 5289,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "08",
+          "alternate_variant_ids": [
+            "7:100386466:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -0.26724179269351644,
+          "q1_probability": 0.7654879596913104,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 276,
+          "empirical_probability_given_lead_state": 0.8363636363636363
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "00",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -3.432282490512745,
+          "q1_probability": 0.032313102187847775,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 14,
+          "empirical_probability_given_lead_state": 0.04242424242424243
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "f6",
+          "alternate_variant_ids": [
+            "7:100373690:T:C",
+            "7:100374211:A:G",
+            "7:100392741:T:G",
+            "7:100406823:C:T",
+            "7:100414711:G:A",
+            "7:100414956:A:C"
+          ],
+          "n_alternate": 6,
+          "q1_log_probability": -4.302355796666481,
+          "q1_probability": 0.01353663186780692,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 4,
+          "empirical_probability_given_lead_state": 0.012121212121212121
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "18",
+          "alternate_variant_ids": [
+            "7:100386466:T:C",
+            "7:100392741:T:G"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -4.484406282301384,
+          "q1_probability": 0.01128358479639574,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "28",
+          "alternate_variant_ids": [
+            "7:100386466:T:C",
+            "7:100406823:C:T"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -4.538116933308565,
+          "q1_probability": 0.010693524225402248,
+          "quadrature_1024_vs_2048_log_difference": -1.8562928971732617e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "88",
+          "alternate_variant_ids": [
+            "7:100386466:T:C",
+            "7:100414956:A:C"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -4.809352771277563,
+          "q1_probability": 0.008153134933460615,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "48",
+          "alternate_variant_ids": [
+            "7:100386466:T:C",
+            "7:100414711:G:A"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -4.809352771277563,
+          "q1_probability": 0.008153134933460615,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "fe",
+          "alternate_variant_ids": [
+            "7:100373690:T:C",
+            "7:100374211:A:G",
+            "7:100386466:T:C",
+            "7:100392741:T:G",
+            "7:100406823:C:T",
+            "7:100414711:G:A",
+            "7:100414956:A:C"
+          ],
+          "n_alternate": 7,
+          "q1_log_probability": -4.831742266939292,
+          "q1_probability": 0.00797261872847634,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "10",
+          "alternate_variant_ids": [
+            "7:100392741:T:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.556010479562593,
+          "q1_probability": 0.0038641618395688147,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "20",
+          "alternate_variant_ids": [
+            "7:100406823:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.606817386750305,
+          "q1_probability": 0.003672739686798177,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "f3232d415dc5afbaf3ba040b474030c7e91526d8264513f3b4e2fa58720f81f3",
+      "coefficient_sha256": "13f9f33fd0a33263ee94c87fef54732fc6ea721d70f5221238de535f3042d56a"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "7_12229132_A_C",
+      "n_haplotypes": 1006,
+      "n_variants": 99,
+      "n_haplotypes_with_conditioning_state": 598,
+      "conditioning_state_empirical_probability": 0.5944333996023857,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 2298963076,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 15402,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 1.3158649274784929e-40,
+        "screening_cutoff_count": 14,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 1.419756058768586e-23,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 20999,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "00000000000000000000000000",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.21842604387103304,
+          "q1_probability": 0.8037829219199962,
+          "quadrature_1024_vs_2048_log_difference": -1.2492229473082261e-12,
+          "empirical_count_given_lead_state": 584,
+          "empirical_probability_given_lead_state": 0.9765886287625418
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "00000000000000000000000002",
+          "alternate_variant_ids": [
+            "7:12244752:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.467038300280597,
+          "q1_probability": 0.0042237230511045255,
+          "quadrature_1024_vs_2048_log_difference": -3.695621586530251e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "04000000000000000000000000",
+          "alternate_variant_ids": [
+            "7:12210776:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.5458536133087675,
+          "q1_probability": 0.0039036096082868048,
+          "quadrature_1024_vs_2048_log_difference": -3.83151288474437e-11,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.0016722408026755853
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "02000000000000000000000000",
+          "alternate_variant_ids": [
+            "7:12210752:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.678918578254509,
+          "q1_probability": 0.0034172519364775375,
+          "quadrature_1024_vs_2048_log_difference": -3.966071915328939e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "00000000000000000000008000",
+          "alternate_variant_ids": [
+            "7:12244247:C:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.178683570635543,
+          "q1_probability": 0.0020731552214641115,
+          "quadrature_1024_vs_2048_log_difference": -4.602096481676199e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "00000000000000000000000400",
+          "alternate_variant_ids": [
+            "7:12242825:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.41352983295421,
+          "q1_probability": 0.0016392280765979937,
+          "quadrature_1024_vs_2048_log_difference": -4.629363559160993e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "00000000000000000000000004",
+          "alternate_variant_ids": [
+            "7:12245514:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.658529824876867,
+          "q1_probability": 0.001283031265130222,
+          "quadrature_1024_vs_2048_log_difference": -4.4781955921280314e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "00000000000000000000000800",
+          "alternate_variant_ids": [
+            "7:12243601:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.920341644254958,
+          "q1_probability": 0.0009874925117507552,
+          "quadrature_1024_vs_2048_log_difference": -3.61835006401634e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "00000000000000000000004000",
+          "alternate_variant_ids": [
+            "7:12244161:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.920341644254958,
+          "q1_probability": 0.0009874925117507552,
+          "quadrature_1024_vs_2048_log_difference": -3.61835006401634e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "00000000000000000000002000",
+          "alternate_variant_ids": [
+            "7:12243703:G:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -6.920341644254958,
+          "q1_probability": 0.0009874925117507552,
+          "quadrature_1024_vs_2048_log_difference": -3.61835006401634e-11,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "b76e97863c354a687233ea9bbd38eb508f8303512e0d30ac56dc84ef6b8295f8",
+      "coefficient_sha256": "5032ad9bd0bb2a1eb28cbb8a8c1f2c38441e788be85f8fe0c589d18f2c8c98d6"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "8_144053248_G_A",
+      "n_haplotypes": 1006,
+      "n_variants": 3,
+      "n_haplotypes_with_conditioning_state": 949,
+      "conditioning_state_empirical_probability": 0.9433399602385686,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 4,
+        "reason_fewer_than_requested": "fewer than 10 possible haplotypes after fixing the lead to ALT",
+        "seed": 2624065903,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 4,
+        "candidate_pool_size": 4,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 8.923805565394348e-128,
+        "screening_cutoff_count": 0,
+        "screen_was_truncated": false,
+        "screening_union_bound_at_tenth_probability": 8.923805565394348e-128,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 6580,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "00",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.010202188520896861,
+          "q1_probability": 0.989849677273021,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 948,
+          "empirical_probability_given_lead_state": 0.9989462592202318
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "04",
+          "alternate_variant_ids": [
+            "8:144099319:G:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.556115128428693,
+          "q1_probability": 0.003863757480572102,
+          "quadrature_1024_vs_2048_log_difference": -1.8474111129762605e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "02",
+          "alternate_variant_ids": [
+            "8:144069710:C:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.712924980654658,
+          "q1_probability": 0.0033029971987890714,
+          "quadrature_1024_vs_2048_log_difference": -1.8474111129762605e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "06",
+          "alternate_variant_ids": [
+            "8:144069710:C:A",
+            "8:144099319:G:A"
+          ],
+          "n_alternate": 2,
+          "q1_log_probability": -5.814635363224828,
+          "q1_probability": 0.0029835680477796095,
+          "quadrature_1024_vs_2048_log_difference": -1.8474111129762605e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.001053740779768177
+        }
+      ],
+      "input_sha256": "d359bc5f7fff8be6ec4b42722bddba7d4e03a5316f4e095affb8adafb3dad7fe",
+      "coefficient_sha256": "0be8f15eb85b6eb10a75d1901850cdce4fb29b452a8f616a8f9692fe01de7a64"
+    },
+    {
+      "dataset": "1000 Genomes 30x, 503 unrelated EUR",
+      "arm": "armA",
+      "lead_state": 0,
+      "locus": "8_27608798_T_C",
+      "n_haplotypes": 1006,
+      "n_variants": 11,
+      "n_haplotypes_with_conditioning_state": 388,
+      "conditioning_state_empirical_probability": 0.3856858846918489,
+      "search": {
+        "requested_top_l": 10,
+        "returned_top_l": 10,
+        "reason_fewer_than_requested": null,
+        "seed": 1633184270,
+        "n_exact_conditional_draws": 100000,
+        "n_unique_discovered": 1017,
+        "candidate_pool_size": 50,
+        "coverage_delta_target": 1e-06,
+        "coverage_union_bound_at_tenth_probability": 4.894996449842953e-167,
+        "screening_cutoff_count": 50,
+        "screen_was_truncated": true,
+        "screening_union_bound_at_tenth_probability": 3.061590528779271e-102,
+        "certified_top10_at_delta": true,
+        "required_draws_at_final_tenth_probability": 4985,
+        "max_draws": 2000000
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "packed_little_endian_hex": "0000",
+          "alternate_variant_ids": [],
+          "n_alternate": 0,
+          "q1_log_probability": -0.1794012652702055,
+          "q1_probability": 0.8357704664406923,
+          "quadrature_1024_vs_2048_log_difference": -1.8696155734687636e-13,
+          "empirical_count_given_lead_state": 375,
+          "empirical_probability_given_lead_state": 0.9664948453608248
+        },
+        {
+          "rank": 2,
+          "packed_little_endian_hex": "0200",
+          "alternate_variant_ids": [
+            "8:27598736:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.2353248569126185,
+          "q1_probability": 0.01447510709528258,
+          "quadrature_1024_vs_2048_log_difference": -1.8829382497642655e-13,
+          "empirical_count_given_lead_state": 2,
+          "empirical_probability_given_lead_state": 0.005154639175257732
+        },
+        {
+          "rank": 3,
+          "packed_little_endian_hex": "0004",
+          "alternate_variant_ids": [
+            "8:27610986:C:A"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -4.9853025031877705,
+          "q1_probability": 0.006837709285719248,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.002577319587628866
+        },
+        {
+          "rank": 4,
+          "packed_little_endian_hex": "0001",
+          "alternate_variant_ids": [
+            "8:27610169:C:T"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.280521362483317,
+          "q1_probability": 0.005089776482324037,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.002577319587628866
+        },
+        {
+          "rank": 5,
+          "packed_little_endian_hex": "0400",
+          "alternate_variant_ids": [
+            "8:27604964:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.389394517357964,
+          "q1_probability": 0.004564736367802879,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 1,
+          "empirical_probability_given_lead_state": 0.002577319587628866
+        },
+        {
+          "rank": 6,
+          "packed_little_endian_hex": "0002",
+          "alternate_variant_ids": [
+            "8:27610304:C:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.434101633366378,
+          "q1_probability": 0.004365154769598869,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 7,
+          "packed_little_endian_hex": "1000",
+          "alternate_variant_ids": [
+            "8:27607412:A:G"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.496644249162832,
+          "q1_probability": 0.004100508661597714,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 8,
+          "packed_little_endian_hex": "0800",
+          "alternate_variant_ids": [
+            "8:27607002:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.496644249162832,
+          "q1_probability": 0.004100508661597714,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 9,
+          "packed_little_endian_hex": "8000",
+          "alternate_variant_ids": [
+            "8:27608664:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.496644249162832,
+          "q1_probability": 0.004100508661597714,
+          "quadrature_1024_vs_2048_log_difference": -1.8740564655672642e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        },
+        {
+          "rank": 10,
+          "packed_little_endian_hex": "4000",
+          "alternate_variant_ids": [
+            "8:27608640:T:C"
+          ],
+          "n_alternate": 1,
+          "q1_log_probability": -5.5506473677419415,
+          "q1_probability": 0.0038849414434702725,
+          "quadrature_1024_vs_2048_log_difference": -1.865174681370263e-13,
+          "empirical_count_given_lead_state": 0,
+          "empirical_probability_given_lead_state": 0.0
+        }
+      ],
+      "input_sha256": "ad26856ef580fc2ee9eb6f51b30a20ad71726b70d578731c2d5d0aa744a86d31",
+      "coefficient_sha256": "f81a071988bed8b580507aaf8beabf343c2d7bd8566c816de045bf130d1bbd9e"
+    }
+  ]
+}

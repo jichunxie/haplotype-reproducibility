@@ -1,0 +1,25 @@
+name: reproduce-public-outputs
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: pip install numpy==1.26.4 scipy==1.11.4 pandas==2.2.3 matplotlib==3.10.6
+      - run: make verify
+      - run: make figures
+      - uses: actions/upload-artifact@v4
+        with:
+          name: paper-figures-and-tables
+          path: |
+            paper/main/figures
+            paper/main/table1_cohort_haplotype_agreement.tex
+            paper/supp/supp-figures
+            paper/supp/supp-tables

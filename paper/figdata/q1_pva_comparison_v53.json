@@ -1,0 +1,981 @@
+{
+  "script": "build_q1_pva_comparison_v53.py",
+  "complete": true,
+  "q": 1,
+  "pva_definition": "tr(B B') / tr(R) = sum_j ||b_j||^2 / p = 1 - sum_j psi_j / p; tr(R)=p",
+  "psi_min": 0.01,
+  "interpretation": "fraction of total unit-diagonal latent variance assigned to the common factor; not an off-diagonal reconstruction-error measure",
+  "cohort_comparison_scope": "descriptive; report cohort-by-arm groups separately and do not treat 1000 Genomes as a validation sample for ROS/MAP",
+  "sources": {
+    "ROS/MAP": {
+      "path": "/hpc/group/xielab/jx42/CHAP/work/rosmap_factor_v51/rosmap_factor_v51_summary.json",
+      "sha256": "8e1dddb4713a3c7b53ea440eaeb2b5682a1a60b5d1b976437312721abdf8ef3a",
+      "jobs": {
+        "pilot": 1796068,
+        "armA": 1796069,
+        "armB": 1796070,
+        "armA_logging_rerun": 1796133,
+        "armB_logging_rerun": 1796134,
+        "armA_extended_refinement": 1796142,
+        "armB_extended_refinement": 1796143
+      },
+      "n_loci": 64
+    },
+    "1000 Genomes unrelated EUR": {
+      "path": "/hpc/group/xielab/jx42/CHAP/work/onekg_factor_v52/onekg_factor_v52_summary.json",
+      "sha256": "4fd4942b761b2523a5ad98de78c992931cb879edef1cce4989589a8a5bb566a3",
+      "jobs": {
+        "pilot": 50993052,
+        "armA": 50993325,
+        "armB": 50993326,
+        "armA_extended_refinement": 50993795,
+        "armB_extended_refinement": 50993796
+      },
+      "n_loci": 64
+    }
+  },
+  "groups": [
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "n_loci": 27,
+      "minimum": 0.9794548565109062,
+      "median": 0.9873107335542015,
+      "maximum": 0.9900000000000001,
+      "n_ge_0.75": 27,
+      "n_ge_0.90": 27,
+      "n_at_uniqueness_ceiling": 4
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "n_loci": 37,
+      "minimum": 0.9260167939462871,
+      "median": 0.9700660929241617,
+      "maximum": 0.9899620322155542,
+      "n_ge_0.75": 37,
+      "n_ge_0.90": 37,
+      "n_at_uniqueness_ceiling": 0
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "n_loci": 27,
+      "minimum": 0.9233684168456828,
+      "median": 0.9872023871984228,
+      "maximum": 0.9900000000000001,
+      "n_ge_0.75": 27,
+      "n_ge_0.90": 27,
+      "n_at_uniqueness_ceiling": 6
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "n_loci": 37,
+      "minimum": 0.8049718809731599,
+      "median": 0.9673978900133003,
+      "maximum": 0.9898587294333396,
+      "n_ge_0.75": 37,
+      "n_ge_0.90": 36,
+      "n_at_uniqueness_ceiling": 0
+    }
+  ],
+  "per_locus": [
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "10_59978394_G_T",
+      "n_fitted_variants": 17,
+      "pva_q1": 0.9861607048682918
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "11_60254475_G_A",
+      "n_fitted_variants": 31,
+      "pva_q1": 0.9876192066315734
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "11_86089237_G_A",
+      "n_fitted_variants": 32,
+      "pva_q1": 0.9823712793044113
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "14_52832135_A_G",
+      "n_fitted_variants": 39,
+      "pva_q1": 0.9869873048074683
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "15_58764824_T_A",
+      "n_fitted_variants": 17,
+      "pva_q1": 0.9854973651231094
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "15_63277703_C_T",
+      "n_fitted_variants": 3,
+      "pva_q1": 0.9899999999999999
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "17_44364976_T_C",
+      "n_fitted_variants": 13,
+      "pva_q1": 0.9874311559654311
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "17_46062125_A_C",
+      "n_fitted_variants": 1286,
+      "pva_q1": 0.9233684168456828
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "17_49373413_G_A",
+      "n_fitted_variants": 32,
+      "pva_q1": 0.9866951639934258
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "17_5066645_C_T",
+      "n_fitted_variants": 23,
+      "pva_q1": 0.9878943719885581
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "17_58331728_G_C",
+      "n_fitted_variants": 3,
+      "pva_q1": 0.9899999999999999
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "17_63468418_C_T",
+      "n_fitted_variants": 10,
+      "pva_q1": 0.99
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "19_44946027_T_G",
+      "n_fitted_variants": 62,
+      "pva_q1": 0.979344895396342
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "19_48710247_G_A",
+      "n_fitted_variants": 36,
+      "pva_q1": 0.983449839330492
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "19_51234736_T_G",
+      "n_fitted_variants": 6,
+      "pva_q1": 0.9900000000000001
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "19_54313903_C_A",
+      "n_fitted_variants": 10,
+      "pva_q1": 0.9888830338284509
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "1_207577223_T_C",
+      "n_fitted_variants": 24,
+      "pva_q1": 0.9848690336959658
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "20_56420643_C_T",
+      "n_fitted_variants": 19,
+      "pva_q1": 0.988931305421783
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "21_26148613_G_T",
+      "n_fitted_variants": 23,
+      "pva_q1": 0.9832064955763482
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "2_127133851_A_C",
+      "n_fitted_variants": 2,
+      "pva_q1": 0.99
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "2_233173931_A_C",
+      "n_fitted_variants": 35,
+      "pva_q1": 0.9864909548252878
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "5_157099320_A_G",
+      "n_fitted_variants": 22,
+      "pva_q1": 0.987857377516427
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "6_47584444_A_T",
+      "n_fitted_variants": 79,
+      "pva_q1": 0.9872023871984228
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "7_100334426_C_T",
+      "n_fitted_variants": 8,
+      "pva_q1": 0.9838738818390886
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "7_12229132_A_C",
+      "n_fitted_variants": 99,
+      "pva_q1": 0.9876105091076584
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "8_144053248_G_A",
+      "n_fitted_variants": 3,
+      "pva_q1": 0.9899999999999999
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armA",
+      "locus": "8_27608798_T_C",
+      "n_fitted_variants": 11,
+      "pva_q1": 0.9863016195654329
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "10_11676714_A_G",
+      "n_fitted_variants": 9,
+      "pva_q1": 0.985283461228134
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "10_59978394_G_T",
+      "n_fitted_variants": 51,
+      "pva_q1": 0.9607372934151471
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "11_121564878_T_C",
+      "n_fitted_variants": 11,
+      "pva_q1": 0.9856519112384288
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "11_47358789_G_T",
+      "n_fitted_variants": 80,
+      "pva_q1": 0.9841848244777307
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "11_60254475_G_A",
+      "n_fitted_variants": 179,
+      "pva_q1": 0.9636401733616656
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "11_86089237_G_A",
+      "n_fitted_variants": 60,
+      "pva_q1": 0.9559014166351998
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "14_52832135_A_G",
+      "n_fitted_variants": 129,
+      "pva_q1": 0.9325487704751618
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "14_92472511_G_A",
+      "n_fitted_variants": 4,
+      "pva_q1": 0.9620217449190224
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "15_58764824_T_A",
+      "n_fitted_variants": 60,
+      "pva_q1": 0.9731706430070651
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "15_63277703_C_T",
+      "n_fitted_variants": 4,
+      "pva_q1": 0.9737108900653165
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "17_44364976_T_C",
+      "n_fitted_variants": 18,
+      "pva_q1": 0.9578124493380515
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "17_46062125_A_C",
+      "n_fitted_variants": 2694,
+      "pva_q1": 0.8049718809731599
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "17_49373413_G_A",
+      "n_fitted_variants": 89,
+      "pva_q1": 0.9704258897122899
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "17_5066645_C_T",
+      "n_fitted_variants": 34,
+      "pva_q1": 0.9673978900133003
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "17_58331728_G_C",
+      "n_fitted_variants": 4,
+      "pva_q1": 0.973184208336159
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "17_63468418_C_T",
+      "n_fitted_variants": 13,
+      "pva_q1": 0.9898587294333396
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "19_1050875_A_G",
+      "n_fitted_variants": 2,
+      "pva_q1": 0.9499779649617988
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "19_44908684_T_C",
+      "n_fitted_variants": 17,
+      "pva_q1": 0.9465727063963404
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "19_44946027_T_G",
+      "n_fitted_variants": 86,
+      "pva_q1": 0.9553175548118228
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "19_48710247_G_A",
+      "n_fitted_variants": 74,
+      "pva_q1": 0.9356708557480007
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "19_51234736_T_G",
+      "n_fitted_variants": 7,
+      "pva_q1": 0.9833493703341022
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "19_54313903_C_A",
+      "n_fitted_variants": 11,
+      "pva_q1": 0.9808423227447682
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "1_207577223_T_C",
+      "n_fitted_variants": 24,
+      "pva_q1": 0.9848690336959658
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "20_56420643_C_T",
+      "n_fitted_variants": 27,
+      "pva_q1": 0.978976773233036
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "21_25970679_C_T",
+      "n_fitted_variants": 70,
+      "pva_q1": 0.988621498194661
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "21_26148613_G_T",
+      "n_fitted_variants": 75,
+      "pva_q1": 0.9624503765505763
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "2_127133851_A_C",
+      "n_fitted_variants": 6,
+      "pva_q1": 0.9351699862991225
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "2_233173931_A_C",
+      "n_fitted_variants": 129,
+      "pva_q1": 0.9470764474260344
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "4_11013198_A_G",
+      "n_fitted_variants": 19,
+      "pva_q1": 0.9797628859042364
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "5_157099320_A_G",
+      "n_fitted_variants": 89,
+      "pva_q1": 0.980738650452614
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "6_32616036_G_A",
+      "n_fitted_variants": 36,
+      "pva_q1": 0.970387636492119
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "6_47584444_A_T",
+      "n_fitted_variants": 94,
+      "pva_q1": 0.965612108201349
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "7_100334426_C_T",
+      "n_fitted_variants": 17,
+      "pva_q1": 0.9452793597540599
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "7_12229132_A_C",
+      "n_fitted_variants": 138,
+      "pva_q1": 0.983274498655152
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "7_143407238_G_C",
+      "n_fitted_variants": 10,
+      "pva_q1": 0.9397785369610423
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "8_144053248_G_A",
+      "n_fitted_variants": 6,
+      "pva_q1": 0.9555184678851955
+    },
+    {
+      "cohort": "1000 Genomes unrelated EUR",
+      "arm": "armB",
+      "locus": "8_27608798_T_C",
+      "n_fitted_variants": 11,
+      "pva_q1": 0.9863016195654329
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "10_59978394_G_T",
+      "n_fitted_variants": 16,
+      "pva_q1": 0.9873107335542015
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "11_60254475_G_A",
+      "n_fitted_variants": 31,
+      "pva_q1": 0.9878062205532816
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "11_86089237_G_A",
+      "n_fitted_variants": 32,
+      "pva_q1": 0.9794548565109062
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "14_52832135_A_G",
+      "n_fitted_variants": 39,
+      "pva_q1": 0.9839117106809471
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "15_58764824_T_A",
+      "n_fitted_variants": 17,
+      "pva_q1": 0.9864462687621125
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "15_63277703_C_T",
+      "n_fitted_variants": 3,
+      "pva_q1": 0.9892265516507551
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "17_44364976_T_C",
+      "n_fitted_variants": 13,
+      "pva_q1": 0.9885558789172003
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "17_46062125_A_C",
+      "n_fitted_variants": 1246,
+      "pva_q1": 0.9816603125564908
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "17_49373413_G_A",
+      "n_fitted_variants": 31,
+      "pva_q1": 0.9842638359475191
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "17_5066645_C_T",
+      "n_fitted_variants": 23,
+      "pva_q1": 0.9871177591633252
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "17_58331728_G_C",
+      "n_fitted_variants": 3,
+      "pva_q1": 0.9899999999999999
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "17_63468418_C_T",
+      "n_fitted_variants": 10,
+      "pva_q1": 0.9897417937666922
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "19_44946027_T_G",
+      "n_fitted_variants": 61,
+      "pva_q1": 0.9824682939035018
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "19_48710247_G_A",
+      "n_fitted_variants": 36,
+      "pva_q1": 0.9826447581499157
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "19_51234736_T_G",
+      "n_fitted_variants": 6,
+      "pva_q1": 0.9900000000000001
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "19_54313903_C_A",
+      "n_fitted_variants": 10,
+      "pva_q1": 0.9895706149773377
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "1_207577223_T_C",
+      "n_fitted_variants": 24,
+      "pva_q1": 0.9861463904548803
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "20_56420643_C_T",
+      "n_fitted_variants": 19,
+      "pva_q1": 0.9884206755658479
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "21_26148613_G_T",
+      "n_fitted_variants": 23,
+      "pva_q1": 0.9866640303582426
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "2_127133851_A_C",
+      "n_fitted_variants": 2,
+      "pva_q1": 0.99
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "2_233173931_A_C",
+      "n_fitted_variants": 35,
+      "pva_q1": 0.987682699175973
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "5_157099320_A_G",
+      "n_fitted_variants": 22,
+      "pva_q1": 0.9869259004109885
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "6_47584444_A_T",
+      "n_fitted_variants": 77,
+      "pva_q1": 0.9882934983346069
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "7_100334426_C_T",
+      "n_fitted_variants": 8,
+      "pva_q1": 0.9851633298594538
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "7_12229132_A_C",
+      "n_fitted_variants": 99,
+      "pva_q1": 0.9872969370567423
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "8_144053248_G_A",
+      "n_fitted_variants": 3,
+      "pva_q1": 0.9899999999999999
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armA",
+      "locus": "8_27608798_T_C",
+      "n_fitted_variants": 11,
+      "pva_q1": 0.9878789853681258
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "10_11676714_A_G",
+      "n_fitted_variants": 9,
+      "pva_q1": 0.98731544110006
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "10_59978394_G_T",
+      "n_fitted_variants": 50,
+      "pva_q1": 0.9662787876044466
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "11_121564878_T_C",
+      "n_fitted_variants": 11,
+      "pva_q1": 0.9858828717906529
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "11_47358789_G_T",
+      "n_fitted_variants": 80,
+      "pva_q1": 0.9827543179726572
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "11_60254475_G_A",
+      "n_fitted_variants": 176,
+      "pva_q1": 0.967114033194558
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "11_86089237_G_A",
+      "n_fitted_variants": 58,
+      "pva_q1": 0.9556917342683494
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "14_52832135_A_G",
+      "n_fitted_variants": 129,
+      "pva_q1": 0.9445795610897743
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "14_92472511_G_A",
+      "n_fitted_variants": 4,
+      "pva_q1": 0.9562047493037806
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "15_58764824_T_A",
+      "n_fitted_variants": 60,
+      "pva_q1": 0.9823164915842597
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "15_63277703_C_T",
+      "n_fitted_variants": 4,
+      "pva_q1": 0.9665828736453995
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "17_44364976_T_C",
+      "n_fitted_variants": 18,
+      "pva_q1": 0.9555566516526783
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "17_46062125_A_C",
+      "n_fitted_variants": 2562,
+      "pva_q1": 0.9640456116146568
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "17_49373413_G_A",
+      "n_fitted_variants": 88,
+      "pva_q1": 0.971603872030217
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "17_5066645_C_T",
+      "n_fitted_variants": 34,
+      "pva_q1": 0.9679637139634805
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "17_58331728_G_C",
+      "n_fitted_variants": 4,
+      "pva_q1": 0.9740503752508456
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "17_63468418_C_T",
+      "n_fitted_variants": 13,
+      "pva_q1": 0.9899620322155542
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "19_1050875_A_G",
+      "n_fitted_variants": 2,
+      "pva_q1": 0.9829659435481337
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "19_44908684_T_C",
+      "n_fitted_variants": 16,
+      "pva_q1": 0.9361838974337755
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "19_44946027_T_G",
+      "n_fitted_variants": 85,
+      "pva_q1": 0.9519761424611687
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "19_48710247_G_A",
+      "n_fitted_variants": 74,
+      "pva_q1": 0.9260167939462871
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "19_51234736_T_G",
+      "n_fitted_variants": 7,
+      "pva_q1": 0.9804300237361943
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "19_54313903_C_A",
+      "n_fitted_variants": 10,
+      "pva_q1": 0.9895706149773377
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "1_207577223_T_C",
+      "n_fitted_variants": 24,
+      "pva_q1": 0.9861463904548803
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "20_56420643_C_T",
+      "n_fitted_variants": 27,
+      "pva_q1": 0.979377639582817
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "21_25970679_C_T",
+      "n_fitted_variants": 69,
+      "pva_q1": 0.9886240054177171
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "21_26148613_G_T",
+      "n_fitted_variants": 75,
+      "pva_q1": 0.9691770807228043
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "2_127133851_A_C",
+      "n_fitted_variants": 6,
+      "pva_q1": 0.9260553947368733
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "2_233173931_A_C",
+      "n_fitted_variants": 124,
+      "pva_q1": 0.97047747000999
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "4_11013198_A_G",
+      "n_fitted_variants": 19,
+      "pva_q1": 0.9807683575805556
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "5_157099320_A_G",
+      "n_fitted_variants": 88,
+      "pva_q1": 0.9700660929241617
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "6_32616036_G_A",
+      "n_fitted_variants": 36,
+      "pva_q1": 0.9649350640433576
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "6_47584444_A_T",
+      "n_fitted_variants": 91,
+      "pva_q1": 0.9695710629560161
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "7_100334426_C_T",
+      "n_fitted_variants": 17,
+      "pva_q1": 0.9695343980400989
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "7_12229132_A_C",
+      "n_fitted_variants": 138,
+      "pva_q1": 0.9817593641203465
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "7_143407238_G_C",
+      "n_fitted_variants": 10,
+      "pva_q1": 0.9482143801826227
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "8_144053248_G_A",
+      "n_fitted_variants": 6,
+      "pva_q1": 0.9758585988821619
+    },
+    {
+      "cohort": "ROS/MAP",
+      "arm": "armB",
+      "locus": "8_27608798_T_C",
+      "n_fitted_variants": 11,
+      "pva_q1": 0.9878789853681258
+    }
+  ]
+}

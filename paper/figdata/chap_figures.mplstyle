@@ -1,0 +1,90 @@
+# chap_figures.mplstyle — shared style for all CHAP v2 manuscript figures
+#
+# Why a style file rather than per-script settings: code/src/scrna_utils.py deliberately never calls
+# sns.set_theme / sns.set_style / rcParams.update, and every *_fontsize kwarg defaults to None, so the
+# active rcParams win. Reference-line colour derives from axes.edgecolor and series colour from
+# axes.prop_cycle. Loading this file is therefore the whole integration:
+#
+#   import matplotlib.pyplot as plt
+#   plt.style.use("manu-v2/figdata/chap_figures.mplstyle")
+#
+# Figures are authored at final print width and never scaled by LaTeX (\includegraphics with no
+# width= override, or width equal to the authored size). Confirm Cell Reports Methods column widths
+# and minimum font size against the current author guidelines before treating the sizes below as final.
+
+# --- fonts: sans-serif, matching main.tex \familydefault{\sfdefault} (scaled helvet) ---------------
+font.family:          sans-serif
+font.sans-serif:      Helvetica, Arial, DejaVu Sans
+font.size:            8
+axes.titlesize:       8
+axes.labelsize:       8
+xtick.labelsize:      7
+ytick.labelsize:      7
+legend.fontsize:      7
+figure.titlesize:     9
+
+# --- vector output: embed real fonts (Type 42), no rasterisation --------------------------------
+savefig.format:       pdf
+# NOT "tight": tight crops the page to the drawn content, so the PDF comes out at some size other than
+# figsize and \includegraphics[width=\linewidth] then RESCALES it -- which silently changes every font
+# size away from the value set here and makes float fitting unpredictable. Authoring at the exact
+# \linewidth and saving standard means the scale factor in LaTeX is exactly 1.
+savefig.bbox:         standard
+savefig.pad_inches:   0.0
+savefig.transparent:  False
+pdf.fonttype:         42
+ps.fonttype:          42
+pdf.compression:      6
+
+# --- canvas: single column default; override per figure ------------------------------------------
+# Cell Press column widths are nominally 85 / 114 / 174 mm. 85 mm = 3.35 in.
+figure.figsize:       3.35, 2.6
+figure.dpi:           150
+figure.constrained_layout.use: True
+
+# --- axes: light frame, no top/right spines, grid off by default ---------------------------------
+axes.spines.top:      False
+axes.spines.right:    False
+axes.edgecolor:       333333
+axes.linewidth:       0.6
+axes.labelcolor:      000000
+axes.axisbelow:       True
+axes.grid:            False
+grid.color:           DDDDDD
+grid.linewidth:       0.4
+
+# --- ticks --------------------------------------------------------------------------------------
+xtick.direction:      out
+ytick.direction:      out
+xtick.major.width:    0.6
+ytick.major.width:    0.6
+xtick.major.size:     2.5
+ytick.major.size:     2.5
+xtick.color:          333333
+ytick.color:          333333
+
+# --- categorical palette: Okabe-Ito, CVD-safe and greyscale-separable ---------------------------
+# order: blue, orange, bluish green, yellow, sky blue, vermillion, reddish purple, black
+axes.prop_cycle: cycler('color', ['0072B2', 'E69F00', '009E73', 'F0E442', '56B4E9', 'D55E00', 'CC79A7', '000000'])
+
+# --- markers and lines: forest plots and strips read better with small solid markers -------------
+lines.linewidth:      1.0
+lines.markersize:     3.5
+lines.markeredgewidth: 0.0
+errorbar.capsize:     0
+scatter.edgecolors:   none
+
+# --- legend: no frame, tight ---------------------------------------------------------------------
+legend.frameon:       False
+legend.borderpad:     0.2
+legend.labelspacing:  0.3
+legend.handlelength:  1.2
+legend.handletextpad: 0.4
+legend.columnspacing: 1.0
+
+# --- images and heatmaps ------------------------------------------------------------------------
+# Figure 4A and S8 need a DIVERGING map centred at 1 (or 0 for correlations) - set vcenter
+# explicitly with TwoSlopeNorm in the script; do NOT rely on this default for those panels.
+image.cmap:           viridis
+image.interpolation:  nearest
+image.origin:         upper
