@@ -106,6 +106,6 @@ future re-querying also depends on server-side stability. Full details are in `e
 
 ## License and citation
 
-Code is released under the BSD 3-Clause license. The data-derived artifacts retain the terms of
+Code is released under the MIT license. The data-derived artifacts retain the terms of
 their source datasets; access-controlled data are not relicensed or redistributed. Please cite the
 paper, the 1000 Genomes resource, ROS/MAP, Fujita et al., and AlphaGenome as applicable.
