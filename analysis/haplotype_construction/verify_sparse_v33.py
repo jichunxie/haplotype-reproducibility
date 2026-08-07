@@ -1,40 +1,19 @@
 #!/usr/bin/env python
-"""VERIFY SPARSE v33 -- the top-10 haplotypes under the FPS (sparse PCA) model and under the dense
-q=1 model, both scored under the TRUE R.  (PI request, 2026-07-27.)
+"""Evaluate constructed haplotypes under the unfactored correlation matrix.
 
-Two jobs:
+The legacy filename records the production artifact. Sparse PCA is not an
+active manuscript estimator. The script forms the union of candidate lists
+from the two recorded constructions and evaluates those candidates under the
+full working correlation matrix rather than either factor approximation.
 
-  (1) THE PI'S COMPARISON.  Enumerate the top 10 haplotypes under each of the two models and score
-      the UNION of the two lists under the true pairwise R -- not under either model's own
-      surrogate, which would be circular.  Report whether the two constructions pick the same
-      haplotype, and by how much.
+For small loci it uses the independent Genz integrator. For larger loci it
+uses a log-space GHK estimator with one Cholesky factor, fixed variable order,
+and common random numbers across candidates. GHK estimates probabilities
+without bias; reported log probabilities inherit Jensen bias, so comparisons
+use common-random-number differences and empirical relative standard errors.
 
-  (2) CLOSE THE COVERAGE GAP.  verify_mode_v31.py could only reach the 17 loci with k+1 <= 26,
-      because the Genz integrator will not scale; the 1286-variant locus was never checked against
-      the true R.  A GHK (Geweke-Hajivassiliou-Keane) simulator costs O(K^2) per draw after ONE
-      Cholesky and reaches every locus.
-
-GHK, and the three things that make it trustworthy here rather than merely fast:
-
-  * ONE Cholesky per locus, shared by every candidate, with a FIXED variable ordering that does not
-    depend on the candidate.  That makes the uniforms genuine COMMON RANDOM NUMBERS, so the
-    difference between two candidates' estimates is far better determined than either level.
-  * Everything in LOG space (`log_ndtr`, `ndtri_exp`, `logsumexp`).  A 1286-term product of
-    sub-unit factors underflows a double outright; the log-space recursion does not.
-  * The estimator is VALIDATED AGAINST GENZ at the 17 loci where both run, before any GHK-only
-    number is used.  A new estimator that has not been checked against the trusted one is not
-    evidence.
-
-Honest statement of what GHK gives: it is UNBIASED for the probability, but log of it is biased
-DOWNWARD by Jensen.  Rankings therefore use common-random-number differences, and the reported
-uncertainty is the RELATIVE standard error of the probability, computed from the realised draw
-spread rather than assumed.
-
-Stochastic (GHK only) -- seeds are fixed, both are recorded in the output, and every locus is scored
-under both so the estimator's own noise is reported rather than asserted.  Candidate generation,
-the quadrature scoring and the FPS refit are all deterministic.
-
-NO AlphaGenome calls.
+Both fixed seeds are recorded. Candidate construction and quadrature scoring
+are deterministic. The script makes no AlphaGenome calls.
 """
 import json
 import os
@@ -52,7 +31,7 @@ LEADS = f"{WORK}/leads_for_ldsens.json"
 SPCA = f"{WORK}/sparsepca_v32.json"
 OUT = f"{WORK}/verify_sparse_v33.json"
 
-M_TOP = 10                # the PI asked for the top 10 under each model
+M_TOP = 10                # candidates retained from each recorded construction
 PSI_FLOOR = 1e-4
 MAX_IT = 400
 TOL = 1e-9
@@ -70,15 +49,13 @@ F_GRID, LOG_W = NODES * 8.0, np.log(WTS * 8.0)
 
 
 def pfa(S, q):
-    """Identical to verify_mode_v31.py:63-81 and diag_sparsepca_v32.py, so the model scored here is
-    byte-for-byte the model those scripts fitted."""
+    """Fit the same floored principal-factor model used for the recorded candidates."""
     return pfa_floor(S, q, PSI_FLOOR, MAX_IT, TOL)
 
 
 def log_probs(cands, logq, log1mq):
     """log Pr(X = x, X_0 = 1) under a rank-1 model, by 1024-node Gauss-Legendre quadrature.
-    The latent prior is the only thing in `lg`; q_0(f) is supplied by the candidate's own x_0 = 1
-    term inside the sum, and must NOT appear twice (that squared it in an earlier script)."""
+    The latent prior appears once in `lg`; q_0(f) is supplied by the candidate's x_0 = 1 term."""
     lg = norm.logpdf(F_GRID)
     out = np.empty(len(cands))
     for c, x in enumerate(cands):

@@ -1,24 +1,20 @@
 #!/usr/bin/env python
-"""PARTNER COUNTS BY LD THRESHOLD (v36) -- how many partners does each AD lead have?
+"""Count linked partners for each Alzheimer disease lead at fixed thresholds.
 
-PI request 2026-07-27: for the 27 loci that carry the construction comparison, report the number of
-LD partners at thresholds 0.5, 0.6, 0.7, 0.8.
-
-Definition of a partner (the pipeline's operative one). The stored per-locus LD table
+The stored per-locus LD table
     {ROOT}/{locus}/ld_query/lead_ld_partners.tsv.gz
 holds every lead-touching pair inside a +/- 524 kb window, computed by PLINK on the 1kGP 30x EUR
 superpopulation (633 samples, related included), after MAF_EUR_unrel >= 0.01 and HWE_EUR >= 1e-6,
-and floored at r^2 >= 0.1. Partner selection in the published pipeline and in the settled r^2 >= 0.8
-rule (T6.16) both threshold THIS table, so it is the right object to re-threshold.
+and floored at r^2 >= 0.1. This is the table thresholded by the production partner-selection step.
 
-r^2 is sign-invariant, so the known sign error in the stored PHASED_R (T6.10/T6.13) does not affect
-any count reported here. Counts are reported on both scales because "threshold 0.5" is ambiguous:
-  n_r2_ge_t   -- PHASED_R2 >= t          (the project's convention; T6.15/T6.16 use this)
+r^2 is sign-invariant, so allele-orientation corrections to signed PHASED_R do not affect these
+counts. Counts are reported on both scales because "threshold 0.5" can otherwise be ambiguous:
+  n_r2_ge_t   -- PHASED_R2 >= t          (the paper's partner-threshold convention)
   n_absr_ge_t -- |PHASED_R| >= t, i.e. r^2 >= t^2 (the looser reading)
 
-Deterministic. No randomness, no seed. No AlphaGenome calls, read-only on Carson's results tree.
+Deterministic. No randomness, no seed. No AlphaGenome calls; reads the original lead-partner tree.
 
-Reproduction asserts (from T6.15, measured 2026-07-26): at r^2 >= 0.8 the totals must be
+Locked-result assertions require that at r^2 >= 0.8 the totals are
 1,918 partners across 38 loci, median 9, max 1,285; at r^2 >= 0.5, 4,350 total, median 24, max 2,693.
 Fails loudly on mismatch.
 """
@@ -67,11 +63,11 @@ for r in leads:
 
 df = pd.DataFrame(rows).sort_values("n_r2_ge_0.8", ascending=False).reset_index(drop=True)
 
-# the 27 loci: those with at least one partner at the settled rule r^2 >= 0.8 (T6.16 / T6.17)
+# The 27 Arm A loci have at least one partner at r^2 >= 0.8.
 in27 = df["n_r2_ge_0.8"] > 0
 df["in_27"] = in27
 
-# ---- reproduction asserts against T6.15
+# Locked partner-count assertions.
 chk = {
     0.8: (1918, 9, 1285),
     0.5: (4350, 24, 2693),
@@ -81,11 +77,11 @@ for t, (tot, med, mx) in chk.items():
     got = (int(c.sum()), int(np.median(c)), int(c.max()))
     if got != (tot, med, mx):
         raise SystemExit(
-            f"REPRODUCTION FAILED at r2>={t}: total/median/max = {got}, T6.15 recorded {(tot, med, mx)}"
+            f"REPRODUCTION FAILED at r2>={t}: total/median/max = {got}, expected {(tot, med, mx)}"
         )
 if int(in27.sum()) != 27:
     raise SystemExit(f"REPRODUCTION FAILED: {int(in27.sum())} loci with >=1 partner at r2>=0.8, expected 27")
-print("reproduction asserts passed (T6.15 totals at r2>=0.8 and r2>=0.5; 27 loci)\n")
+print("partner-count assertions passed (r2>=0.8, r2>=0.5, and 27 Arm A loci)\n")
 
 cols = ["locus", "n_published"] + [f"n_r2_ge_{t}" for t in THRESH] + ["n_candidates_r2_ge_0.1", "in_27"]
 with pd.option_context("display.width", 200, "display.max_rows", 60):
@@ -127,7 +123,7 @@ meta = {
     "seed": None,
     "n_loci_total": int(len(df)),
     "n_loci_in_27": int(in27.sum()),
-    "reproduces": "T6.15 counts at r2>=0.8 (1918/9/1285) and r2>=0.5 (4350/24/2693)",
+    "reproduces": "locked counts at r2>=0.8 (1918/9/1285) and r2>=0.5 (4350/24/2693)",
 }
 json.dump({"meta": meta, "per_locus": df.to_dict(orient="records")}, open(OUT, "w"), indent=1)
 print(f"\nwrote {OUT}")

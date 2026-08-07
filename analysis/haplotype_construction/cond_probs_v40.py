@@ -1,31 +1,17 @@
 #!/usr/bin/env python
-"""CONDITIONAL-PROBABILITY NORMALISATION (v40).
+"""Normalize stored haplotype probabilities by the lead-state marginal.
 
-DEFECT.  build_topM_v28.py:84 documents log_probs() as returning log Pr(X = x | X_0 = 1).  It does
-not.  log_g is the latent PRIOR only, phi(f), and the lead's own Bernoulli factor q_0(f) is supplied
-inside the candidate product, so the quantity returned is
+The source artifacts contain joint probabilities Pr(X=x, X_0=1). This script
+also reports the conditional values Pr(X=x | X_0=1) by dividing by the lead
+alternate-allele frequency p_0 used to define the fitted threshold.
 
-    log integral phi(f) q_0(f) prod_{j>=1} q_j(f)^{x_j} {1-q_j(f)}^{1-x_j} df  =  log Pr(X = x, X_0 = 1),
+Because p_0 is constant across candidates at one locus and lead state, this
+normalization changes absolute probabilities but not rankings, top-one
+identity, or log-probability gaps. The script retains both forms for audit.
 
-the JOINT probability.  The conditional needs a further division by p_0 = Pr(X_0 = 1) = Phi(-tau_0),
-which is never applied.  The same omission is present in the GHK evaluation under the unfactored
-working correlation, which returns a Gaussian rectangle probability -- again a joint.
-
-WHAT IS AND IS NOT AFFECTED.  p_0 is a single constant per locus, shared by every candidate
-conditioned on the same lead.  So:
-  * absolute probabilities and absolute log-probabilities are wrong by exactly that factor;
-  * every DIFFERENCE of log-probabilities is unaffected -- rankings, the top-1 identity, the
-    lead-over-runner-up gap, gap/SE, and the rel_logprob_* and logp_deficit_* fields all stand.
-This is why the fix is a renormalisation and not a re-run: the stored numbers are correctly computed
-joint probabilities that were labelled conditional.  The originals are left untouched.
-
-p_0 is taken from the same ld_v24 .afreq the model's thresholds come from, so
-tau_0 = Phi^{-1}(1 - p_0) exactly and no second convention enters.
-
-ASSERTS: every corrected probability must lie in (0, 1]; every corrected log-probability must be
-<= 0; and the top-two log-gap must be unchanged to 1e-12.  Fails loudly otherwise.
-
-Deterministic.  No RNG.  NO AlphaGenome calls.
+Validation checks require conditional probabilities in (0, 1], non-positive
+conditional log probabilities, and an unchanged top-two log gap. The
+calculation is deterministic and makes no AlphaGenome calls.
 """
 import json
 import os
