@@ -67,8 +67,8 @@ The public release supports two levels of reproduction:
 
 1. `make verify` checks the immutable input checksums, locked numerical claims, and ranking-search
    tests.
-2. `make figures` rebuilds all seven active main figures, all eight active supplementary figures,
-   the main cross-panel table, and both supplementary tables from released aggregate artifacts.
+2. `make figures` rebuilds all four active main figures, all eleven active supplementary figures,
+   and all three supplementary tables from released aggregate artifacts.
 
 Using Conda or Mamba:
 
@@ -89,7 +89,6 @@ docker run --rm -v "$PWD:/work" -w /work haploperturb-paper make verify figures
 Generated outputs are written to:
 
 - `paper/main/figures/`
-- `paper/main/table1_cohort_haplotype_agreement.tex`
 - `paper/supp/supp-figures/`
 - `paper/supp/supp-tables/`
 
@@ -149,6 +148,11 @@ cohort/arm/locus models; cross-panel rank-one agreement; all 1,620 v77 simulatio
 population plus 3,240 fitted certified searches; the main complete-exon enrichment estimates; the
 simple-baseline estimates; and 27/27 unfactored-correlation mode checks. See
 [`manifests/result_map.csv`](manifests/result_map.csv) for the display-level provenance map.
+
+The display map matches the current JASA review version: four main figures, eleven supplementary
+figures, and three supplementary tables. Model-adequacy, empirical-rank, and simulation-design
+displays formerly in the main paper are Supplementary Figures 9--11; the cross-panel agreement
+table is Supplementary Table 3. This placement change did not alter an analysis result.
 
 ## Environment
 

@@ -19,6 +19,7 @@ for directory in targets:
             elif path.is_dir():
                 path.rmdir()
         directory.rmdir()
-table = ROOT / "paper" / "main" / "table1_cohort_haplotype_agreement.tex"
-if table.exists():
-    table.unlink()
+# Remove the pre-technical-check table location if it remains from an older build.
+legacy_table = ROOT / "paper" / "main" / "table1_cohort_haplotype_agreement.tex"
+if legacy_table.exists():
+    legacy_table.unlink()

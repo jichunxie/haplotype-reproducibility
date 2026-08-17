@@ -20,6 +20,5 @@ jobs:
           name: paper-figures-and-tables
           path: |
             paper/main/figures
-            paper/main/table1_cohort_haplotype_agreement.tex
             paper/supp/supp-figures
             paper/supp/supp-tables

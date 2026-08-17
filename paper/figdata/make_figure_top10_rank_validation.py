@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Figure 3: rank validation and HaploPerturb-versus-empirical probability checks."""
+"""Supplementary Figure 10: fitted-rank and empirical-frequency checks."""
 import json
 from pathlib import Path
 
@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 HERE = Path(__file__).resolve().parent
-OUT = HERE.parent / "main" / "figures" / "figure_top10_rank_validation.pdf"
+OUT = HERE.parent / "supp" / "supp-figures" / "figure_top10_rank_validation.pdf"
 
 
 def average_ranks(values):

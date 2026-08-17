@@ -9,6 +9,20 @@ Production filenames retain their version suffixes so a script can be tied to ex
 locked artifacts. Renaming those files would obscure provenance. The current result flow is listed
 in `manifests/code_inventory.csv`; version number alone does not determine status.
 
+## JASA technical-check display reorganization
+
+The JASA review version reduced the main paper to four figures. The one-factor adequacy display,
+empirical rank-validation display, and known-truth simulation design moved from main Figures 2--4
+to Supplementary Figures 9--11. The former main cross-panel table moved to Supplementary Table 3.
+The remaining main displays were renumbered: simulation results became Figure 2, the donor-panel
+enrichment comparison became Figure 3, and the public-panel comparison became Figure 4.
+
+This was a placement and numbering change only. The locked artifacts, numerical claims, builders,
+seeds, and compute provenance did not change. Legacy source names such as
+`make_figure7_reference_panel_enrichment_v78.py`, `S2_q1_residual_heatmap.pdf`, and
+`S3_q1_loading_density.pdf` remain to preserve their production history; the current display map is
+`manifests/result_map.csv`.
+
 ## Conditional-probability normalization (`cond_probs_v40.py`)
 
 An earlier stored value was a joint probability of a full haplotype and the alternate lead state,
@@ -40,4 +54,3 @@ Failed and superseded job IDs are retained in the manuscript project's provenanc
 artifact-level records, where they can be audited without interrupting the public code narrative.
 Only the jobs named in `manifests/result_map.csv` support active displays. The public source files do
 not use informal debugging commentary as instructions.
-

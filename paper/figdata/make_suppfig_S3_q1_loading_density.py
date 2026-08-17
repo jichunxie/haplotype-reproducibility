@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Supplementary Figure 3: density of public-panel q=1 loadings.
+"""Supplementary Figure 2: density of public-panel q=1 loadings.
 
 Sorted magnitudes diagnose gaps directly; cumulative squared-loading energy
 diagnoses concentration. A sparse loading vector would drop sharply and place

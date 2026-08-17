@@ -29,7 +29,7 @@ RESIDUAL_SOURCES = {
     "ROS/MAP": HERE / "q1_pairwise_residuals_rosmap_v54.json",
     "1000 Genomes unrelated EUR": HERE / "q1_pairwise_residuals_1kg_v54.json",
 }
-OUT = HERE.parent / "main" / "figures" / "figure_pva_q1.pdf"
+OUT = HERE.parent / "supp" / "supp-figures" / "figure_pva_q1.pdf"
 LINEWIDTH_IN = 390.0 / 72.0
 
 artifact = json.load(SOURCE.open())

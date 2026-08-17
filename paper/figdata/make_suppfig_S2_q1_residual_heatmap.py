@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Supplementary Figure 2: observed, HaploPerturb-implied, and residual q=1 correlations.
+"""Supplementary Figure 1: observed, HaploPerturb-implied, and residual q=1 correlations.
 
 The displayed locus is selected mechanically from the public 1000 Genomes
 analysis as the locus with the largest partner--partner residual RMSE among

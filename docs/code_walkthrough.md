@@ -29,6 +29,11 @@ This reads only `paper/figdata/` and writes the active figures/tables under `pap
 `paper/supp/`. `scripts/build_paper_outputs.py` is the ordered display driver. The submitted copies
 under `reference/` are comparison targets, not build inputs.
 
+The current paper has four main figures, eleven supplementary figures, and three supplementary
+tables. In the JASA technical-check layout, model adequacy, empirical rank validation, and the
+simulation design are Supplementary Figures 9--11, while cross-panel agreement is Supplementary
+Table 3. `manifests/result_map.csv` gives the exact current numbering and output path.
+
 ### Level 3: rerun upstream analyses
 
 Follow the numbered stages below. Public and synthetic stages run on DCC or another Linux/Slurm
@@ -151,4 +156,3 @@ Only approved compact outputs are copied into `paper/figdata/`. Then:
 
 The public code inventory in `manifests/code_inventory.csv` is the fastest way to locate one script
 without reading unrelated stages.
-

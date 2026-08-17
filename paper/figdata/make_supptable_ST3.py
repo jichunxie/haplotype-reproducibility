@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the cross-panel agreement table from the locked v72 summary."""
+"""Generate Supplementary Table 3 from the locked cross-panel v72 summary."""
 
 from __future__ import annotations
 
@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-OUTPUT = HERE.parent / "main" / "table1_cohort_haplotype_agreement.tex"
+OUTPUT = HERE.parent / "supp" / "supp-tables" / "ST3_cohort_haplotype_agreement.tex"
 
 
 def integer(value: float) -> str:
@@ -19,26 +19,26 @@ def main() -> None:
     lines = [
         r"\begin{tabular}{llccccc}",
         r"\toprule",
-        r"Arm & Partner sets & Loci & Missing partners & Rank one exact & Top ten shared & Top-ten nearest $d$ \\",
+        r"Arm & Partner sets & Loci & Missing & Rank-one exact & Top-ten shared & Nearest $d$ \\",
         r"\midrule",
     ]
     for arm in artifact["by_arm"]:
         for label, key in (
             ("Same", "same_partner_set"),
-            ("Different; shared only", "different_partner_set_shared_coordinates_only"),
+            ("Different", "different_partner_set_shared_coordinates_only"),
         ):
             row = arm[key]
             missing = row["n_partners_missing_from_rosmap"]
             missing_text = "0" if label == "Same" else (
-                f"{integer(missing['median'])} [{integer(missing['min'])},{integer(missing['max'])}]"
+                f"${integer(missing['median'])}\\ [{integer(missing['min'])},{integer(missing['max'])}]$"
             )
             top1 = row["top1"]
             shared = row["top10_lists"]["shared_fraction_of_smaller_list"]["median"]
             nearest = row["top10_lists"]["nearest_hamming"]
             lines.append(
                 f"{arm['arm'][-1]} & {label} & {row['n_loci']} & {missing_text} & "
-                f"{top1['n_exact']}/{top1['n_rank_matched_haplotype_pairs']} & {shared:.2f} & "
-                f"{integer(nearest['median'])} [{integer(nearest['q95'])},{integer(nearest['max'])}] \\\\"
+                f"${top1['n_exact']}/{top1['n_rank_matched_haplotype_pairs']}$ & {shared:.2f} & "
+                f"${integer(nearest['median'])}\\ [{integer(nearest['q95'])},{integer(nearest['max'])}]$ \\\\"
             )
     lines.extend([r"\bottomrule", r"\end{tabular}", ""])
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)

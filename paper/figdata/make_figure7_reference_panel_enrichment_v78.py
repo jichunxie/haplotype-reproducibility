@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Build the revised main Figure 7 and its supplementary companion.
+"""Build current main Figure 4 and Supplementary Figure 7.
 
 The main figure retains the public-minus-donor contrasts and compares the
 public-panel HaploPerturb top-one, top-five and top-ten summaries with the empirical
 mode, LD-sign and single-lead strategies.  The public- versus donor-panel
-enrichment estimates formerly shown as Figure 7A--B are written to a separate
+enrichment estimates formerly shown in the main figure are written to a separate
 supplementary figure.
 """
 from __future__ import annotations

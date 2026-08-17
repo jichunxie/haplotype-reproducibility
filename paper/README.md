@@ -6,8 +6,8 @@ not rerun genotype processing, model fitting, AlphaGenome, or hypothesis-level b
 ## Layout
 
 - `figdata/`: locked disclosure-safe JSON/CSV/NPZ inputs and their display builders;
-- `main/`: generated main-paper figures and Table 1;
-- `supp/`: generated supplementary figures and tables;
+- `main/`: four generated main-paper figures;
+- `supp/`: eleven generated supplementary figures and three supplementary tables;
 - `ranking-generated/`: temporary output from the combined simulation figure builder.
 
 Run all active builders in the correct order with:
@@ -22,3 +22,7 @@ builder, locked inputs, upstream analysis, job IDs, and access classification fo
 Generated outputs are ignored by Git because `reference/` contains the submitted comparison copies.
 Numerical assertions and input checksums, rather than byte-identical PDF files, are the release
 gates.
+
+The current JASA review layout places the model-adequacy, empirical-rank, and simulation-design
+displays in Supplementary Figures 9--11 and the cross-panel agreement table in Supplementary
+Table 3. Their production filenames are retained where useful for provenance.
